@@ -21,23 +21,6 @@ export default function MenuSection() {
           <p className="font-sans text-base text-[#6E6259] font-light leading-relaxed max-w-2xl mx-auto">
             Every drink is crafted with pure mineral-balanced water, precisely dialed-in extraction profiles, and certified British &amp; European provenance.
           </p>
-
-          {/* Quick PDF Access Bar */}
-          <div className="mt-6 flex items-center justify-center gap-3">
-            <span className="text-xs uppercase tracking-widest text-[#B88B58] font-semibold">
-              Top 6 Signature Selections
-            </span>
-            <span className="text-[#D4C7BC]">•</span>
-            <a
-              href="/menu.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest font-bold text-[#140C07] hover:text-[#B88B58] underline underline-offset-4 decoration-[#B88B58] transition-colors"
-            >
-              <span>View Full Menu (PDF)</span>
-              <ExternalLink className="w-3 h-3 text-[#B88B58]" />
-            </a>
-          </div>
         </Reveal>
 
         {/* Top Six Menu Grid (3x2) */}
@@ -144,10 +127,11 @@ export default function MenuSection() {
                 href="/menu.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shimmer-btn w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#B88B58] hover:bg-[#A37845] text-white text-xs uppercase tracking-widest font-bold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group"
+                className="shimmer-btn w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#B88B58] hover:bg-[#A37845] text-white text-xs uppercase tracking-widest font-bold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group"
               >
-                <span>View Full Menu (PDF)</span>
-                <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                <FileText className="w-4 h-4 text-white" />
+                <span>View All Menu (PDF)</span>
+                <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
 
               <a
