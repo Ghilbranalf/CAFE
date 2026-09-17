@@ -138,7 +138,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 lg:h-24 flex items-center justify-between">
           
           {/* Bespoke Heritage Brand Crest & Wordmark */}
-          <a href="#hero" className="flex items-center gap-2.5 sm:gap-3.5 group min-w-0">
+          <a href="#hero" className="flex items-center gap-2.5 sm:gap-3.5 group shrink-0">
             {/* Custom Monogram Seal */}
             <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-[#B88B58] bg-[#140C07] text-[#B88B58] flex items-center justify-center shrink-0 shadow-sm relative group-hover:border-[#FAF7F2] transition-colors">
               <svg viewBox="0 0 100 100" className="w-7 h-7 sm:w-8 sm:h-8 fill-current">
@@ -162,8 +162,8 @@ export default function Navbar() {
             </div>
 
             {/* Typography */}
-            <div className="flex flex-col truncate">
-              <span className="font-serif font-bold text-base sm:text-lg lg:text-xl tracking-[0.08em] sm:tracking-[0.14em] text-[#140C07] uppercase leading-tight group-hover:text-[#B88B58] transition-colors truncate">
+            <div className="flex flex-col">
+              <span className="font-serif font-bold text-sm sm:text-lg lg:text-xl tracking-[0.1em] sm:tracking-[0.14em] text-[#140C07] uppercase leading-tight group-hover:text-[#B88B58] transition-colors whitespace-nowrap">
                 The Heritage {"&"} Roast
               </span>
             </div>
@@ -187,7 +187,7 @@ export default function Navbar() {
             <MagneticButton
               href="#reservation"
               strength={0.22}
-              className="shimmer-btn hidden sm:inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-[#140C07] hover:bg-[#2A1C14] text-[#FAF7F2] text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] border border-[#B88B58]/50 shadow-xs hover:shadow-md transition-all hover:border-[#B88B58] group cursor-pointer rounded-xl"
+              className="shimmer-btn hidden md:inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-[#140C07] hover:bg-[#2A1C14] text-[#FAF7F2] text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] border border-[#B88B58]/50 shadow-xs hover:shadow-md transition-all hover:border-[#B88B58] group cursor-pointer rounded-xl"
             >
               <span>Reserve a Table</span>
               <span className="text-[#B88B58] group-hover:translate-x-1 transition-transform duration-300">→</span>
