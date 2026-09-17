@@ -5,24 +5,24 @@ import Reveal from './Reveal';
 
 export default function Reviews() {
   return (
-    <section id="reviews" className="pt-12 pb-20 md:pt-16 md:pb-28 bg-[#FAF7F2] text-[#140C07] overflow-hidden">
+    <section id="reviews" className="pt-10 sm:pt-12 pb-16 sm:pb-20 md:pt-16 md:pb-28 bg-[#FAF7F2] text-[#140C07] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <Reveal effect="up" className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#B88B58] block mb-2.5">
+        <Reveal effect="up" className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+          <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#B88B58] block mb-2 sm:mb-2.5">
             Guest Journal &amp; Reflections
           </span>
-          <h2 className="font-serif font-bold text-3xl sm:text-4xl text-[#140C07] mb-4">
+          <h2 className="font-serif font-bold text-2xl sm:text-3xl md:text-4xl text-[#140C07] mb-3 sm:mb-4">
             Words from Our Discerning Patrons
           </h2>
-          <p className="font-sans text-base text-[#6E6259] font-light leading-relaxed">
+          <p className="font-sans text-sm sm:text-base text-[#6E6259] font-light leading-relaxed">
             Genuine entries and reflections from residents, writers, and international coffee lovers in London.
           </p>
         </Reveal>
 
         {/* Reviews Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-7 lg:gap-8 mb-10 sm:mb-14">
           {REVIEWS.map((review, idx) => (
             <Reveal
               key={review.id}
@@ -32,7 +32,7 @@ export default function Reviews() {
               className="h-full"
             >
               <article
-                className="h-full bg-white rounded-2xl p-8 border border-[#E8DFD5] shadow-xs hover:shadow-xl hover:border-[#B88B58]/40 hover:-translate-y-2 transition-all duration-500 ease-out flex flex-col justify-between group"
+                className="h-full bg-white rounded-2xl p-6 sm:p-7 lg:p-8 border border-[#E8DFD5] shadow-xs hover:shadow-xl hover:border-[#B88B58]/40 hover:-translate-y-1.5 sm:hover:-translate-y-2 transition-all duration-500 ease-out flex flex-col justify-between group"
               >
                 <div>
                   {/* Header */}

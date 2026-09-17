@@ -37,11 +37,11 @@ export default function Hero() {
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={handleMouseLeave}
-      className="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden bg-[#FAF7F2] select-none"
+      className="relative pt-8 pb-16 md:pt-20 md:pb-28 overflow-hidden bg-[#FAF7F2]"
     >
       {/* 1. Atmospheric Master Barista Background Atmosphere (Right-Anchored) */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 select-none">
-        <div className="absolute top-0 right-0 w-full lg:w-3/5 h-full opacity-35 lg:opacity-45">
+        <div className="absolute top-0 right-0 w-full lg:w-3/5 h-full opacity-30 lg:opacity-45">
           <img
             src="/barista_still_50.jpg"
             alt="Mayfair Master Barista Roastery Atmosphere"
@@ -61,33 +61,33 @@ export default function Hero() {
       <AromaSteam />
 
       {/* 3. Ambient Warm Roast Glow */}
-      <div className="absolute top-1/4 right-0 w-[550px] h-[550px] rounded-full bg-gradient-to-bl from-[#B88B58]/18 via-[#FAF7F2] to-transparent blur-3xl pointer-events-none animate-ambient select-none"></div>
+      <div className="absolute top-1/4 right-0 w-[350px] sm:w-[550px] h-[350px] sm:h-[550px] rounded-full bg-gradient-to-bl from-[#B88B58]/18 via-[#FAF7F2] to-transparent blur-3xl pointer-events-none animate-ambient select-none"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           
           {/* Left Column: Editorial Narrative (Staggered Entrance) */}
           <div className="lg:col-span-7 flex flex-col items-start z-10">
             
             {/* Editorial Eyebrow */}
             <div 
-              className="flex items-center gap-3 mb-6 select-none animate-entrance"
+              className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4 sm:mb-6 animate-entrance"
               style={{ animationDelay: '100ms' }}
             >
-              <span className="w-8 h-px bg-[#B88B58]"></span>
-              <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.28em] text-[#B88B58]">
+              <span className="w-6 sm:w-8 h-px bg-[#B88B58]"></span>
+              <span className="font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.2em] sm:tracking-[0.28em] text-[#B88B58]">
                 Mayfair Micro-Roastery &amp; Coffee House
               </span>
-              <span className="text-[#B88B58]/40 text-[9px]">✦</span>
-              <span className="font-sans text-[11px] uppercase tracking-[0.22em] text-[#8C7A6B]">
+              <span className="text-[#B88B58]/40 text-[9px] hidden xs:inline">✦</span>
+              <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-[#8C7A6B]">
                 Anno 2021
               </span>
             </div>
 
             {/* Poetic & Authoritative Luxury Headline */}
-            <div className="overflow-hidden mb-7">
+            <div className="overflow-hidden mb-5 sm:mb-7">
               <h1 
-                className="font-serif text-4xl sm:text-6xl lg:text-[64px] text-[#140C07] leading-[1.07] tracking-tight font-normal animate-entrance"
+                className="font-serif text-3xl sm:text-5xl lg:text-[64px] text-[#140C07] leading-[1.12] sm:leading-[1.07] tracking-tight font-normal animate-entrance"
                 style={{ animationDelay: '250ms' }}
               >
                 A civilised haven for <br className="hidden sm:inline" />
@@ -99,7 +99,7 @@ export default function Hero() {
 
             {/* Evocative Editorial Narrative */}
             <p 
-              className="font-sans text-base sm:text-lg text-[#5E5249] leading-relaxed mb-10 max-w-xl font-light animate-entrance"
+              className="font-sans text-sm sm:text-base lg:text-lg text-[#5E5249] leading-relaxed mb-8 sm:mb-10 max-w-xl font-light animate-entrance"
               style={{ animationDelay: '400ms' }}
             >
               Behind the fluted Georgian windows of Mount Street, we roast rare single-origin harvests on vintage cast iron, fold artisan viennoiserie in Charentes butter, and preserve a quiet sanctuary for literature, conversation, and discerning taste.
@@ -107,13 +107,13 @@ export default function Hero() {
 
             {/* Bespoke Luxury CTAs with Magnetic Pull & Shimmer */}
             <div 
-              className="flex flex-wrap items-center gap-6 mb-14 w-full sm:w-auto animate-entrance"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-6 mb-8 sm:mb-12 w-full sm:w-auto animate-entrance"
               style={{ animationDelay: '550ms' }}
             >
               <MagneticButton
                 href="#menu"
                 strength={0.25}
-                className="shimmer-btn w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#140C07] hover:bg-[#2A1C14] text-[#FAF7F2] text-[11px] font-semibold uppercase tracking-[0.22em] border border-[#B88B58]/60 shadow-md hover:shadow-xl transition-all hover:border-[#B88B58] group cursor-pointer rounded-xl"
+                className="shimmer-btn w-full sm:w-auto inline-flex items-center justify-center gap-3 px-7 sm:px-8 py-3.5 sm:py-4 bg-[#140C07] hover:bg-[#2A1C14] text-[#FAF7F2] text-[11px] font-semibold uppercase tracking-[0.22em] border border-[#B88B58]/60 shadow-md hover:shadow-xl transition-all hover:border-[#B88B58] group cursor-pointer rounded-xl text-center"
               >
                 <span>Explore Curated Menu</span>
                 <span className="text-[#B88B58] group-hover:translate-x-1.5 transition-transform duration-300">→</span>
@@ -122,7 +122,7 @@ export default function Hero() {
               <MagneticButton
                 href="#reservation"
                 strength={0.18}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3 px-2 text-[#140C07] hover:text-[#B88B58] text-[11px] font-semibold uppercase tracking-[0.22em] border-b border-[#140C07]/30 hover:border-[#B88B58] transition-all group cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3.5 sm:py-3 px-4 sm:px-2 rounded-xl sm:rounded-none border sm:border-0 border-[#140C07]/20 sm:border-b sm:border-[#140C07]/30 hover:border-[#B88B58] text-[#140C07] hover:text-[#B88B58] text-[11px] font-semibold uppercase tracking-[0.22em] transition-all group cursor-pointer text-center"
               >
                 <span>Reserve a Table</span>
                 <span className="text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300">↗</span>
@@ -131,20 +131,20 @@ export default function Hero() {
 
             {/* Clean, Refined Brand Highlights */}
             <div 
-              className="flex flex-wrap items-center gap-6 sm:gap-8 pt-6 border-t border-[#E8DFD5] w-full max-w-xl animate-entrance"
+              className="flex flex-wrap items-center gap-x-5 gap-y-2.5 sm:gap-8 pt-5 sm:pt-6 border-t border-[#E8DFD5] w-full max-w-xl animate-entrance text-xs sm:text-sm"
               style={{ animationDelay: '700ms' }}
             >
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58]" />
-                <span className="font-serif font-semibold text-sm text-[#140C07]">SCA 87+ Single-Origin</span>
+                <span className="font-serif font-semibold text-[#140C07]">SCA 87+ Single-Origin</span>
               </div>
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58]" />
-                <span className="font-serif font-semibold text-sm text-[#140C07]">72-Hr AOP Viennoiserie</span>
+                <span className="font-serif font-semibold text-[#140C07]">72-Hr AOP Viennoiserie</span>
               </div>
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58]" />
-                <span className="font-serif font-semibold text-sm text-[#140C07]">Mayfair Georgian Parlour</span>
+                <span className="font-serif font-semibold text-[#140C07]">Mayfair Georgian Parlour</span>
               </div>
             </div>
 
@@ -196,12 +196,12 @@ export default function Hero() {
               </div>
 
               {/* Minimalist Editorial Controls & View Switcher (Under the Frame) */}
-              <div className="mt-4 flex items-center justify-between px-1 text-[11px] font-sans">
+              <div className="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 px-1 text-[11px] font-sans">
                 {/* Tabs */}
-                <div className="flex items-center gap-1.5 bg-[#FAF7F2] p-1.5 rounded-xl border border-[#E8DFD5] shadow-xs">
+                <div className="flex items-center gap-1.5 bg-[#FAF7F2] p-1 sm:p-1.5 rounded-xl border border-[#E8DFD5] shadow-xs w-full sm:w-auto justify-center">
                   <button
                     onClick={() => setViewMode('latte-art')}
-                    className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
+                    className={`flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-lg text-[11px] sm:text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
                       viewMode === 'latte-art'
                         ? 'bg-[#140C07] text-[#FAF7F2] shadow-xs'
                         : 'text-[#7A6D63] hover:text-[#140C07]'
@@ -213,7 +213,7 @@ export default function Hero() {
 
                   <button
                     onClick={() => setViewMode('interior')}
-                    className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
+                    className={`flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-lg text-[11px] sm:text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
                       viewMode === 'interior'
                         ? 'bg-[#140C07] text-[#FAF7F2] shadow-xs'
                         : 'text-[#7A6D63] hover:text-[#140C07]'
@@ -225,7 +225,7 @@ export default function Hero() {
                 </div>
 
                 {/* Provenance Tag */}
-                <div className="hidden sm:flex items-center gap-1.5 text-[#8C7A6B] text-[10px] font-mono tracking-widest uppercase">
+                <div className="flex items-center gap-1.5 text-[#8C7A6B] text-[10px] font-mono tracking-widest uppercase">
                   <Sparkles className="w-3 h-3 text-[#B88B58]" />
                   <span>Mayfair W1K • Est. 2021</span>
                 </div>

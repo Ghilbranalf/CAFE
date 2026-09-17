@@ -3,11 +3,11 @@ import { Coffee, Heart } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#140C07] text-[#DFD5CB] pt-16 pb-12 border-t border-[#B88B58]/20">
+    <footer className="bg-[#140C07] text-[#DFD5CB] pt-12 sm:pt-16 pb-10 sm:pb-12 border-t border-[#B88B58]/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-14 border-b border-white/10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-8 pb-10 sm:pb-14 border-b border-white/10">
           
           {/* Brand Column */}
           <div className="lg:col-span-5">

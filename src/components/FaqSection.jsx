@@ -11,24 +11,24 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faq" className="pt-20 md:pt-28 pb-12 bg-[#FAF7F2] text-[#140C07] overflow-hidden">
+    <section id="faq" className="pt-16 sm:pt-20 md:pt-28 pb-10 sm:pb-12 bg-[#FAF7F2] text-[#140C07] overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <Reveal effect="up" className="text-center mb-16">
-          <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#B88B58] block mb-2.5">
+        <Reveal effect="up" className="text-center mb-10 sm:mb-16">
+          <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#B88B58] block mb-2 sm:mb-2.5">
             Frequently Asked Enquiries
           </span>
-          <h2 className="font-serif font-bold text-3xl sm:text-4xl text-[#140C07] mb-4">
+          <h2 className="font-serif font-bold text-2xl sm:text-3xl md:text-4xl text-[#140C07] mb-3 sm:mb-4">
             Guest Etiquette &amp; Practical Notes
           </h2>
-          <p className="font-sans text-base text-[#6E6259] font-light leading-relaxed">
+          <p className="font-sans text-sm sm:text-base text-[#6E6259] font-light leading-relaxed">
             Everything you need to know regarding our cafe hospitality, remote working, and dietary offerings.
           </p>
         </Reveal>
 
         {/* Accordion List */}
-        <div className="space-y-4">
+        <div className="space-y-3.5 sm:space-y-4">
           {FAQS.map((faq, idx) => {
             const isOpen = openId === faq.id;
             return (
@@ -40,13 +40,13 @@ export default function FaqSection() {
                 >
                   <button
                     onClick={() => toggleAccordion(faq.id)}
-                    className="w-full px-6 sm:px-8 py-5 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-[#FAF7F2]/60 transition-colors"
+                    className="w-full px-5 sm:px-8 py-4 sm:py-5 text-left flex items-center justify-between gap-3.5 sm:gap-4 cursor-pointer hover:bg-[#FAF7F2]/60 transition-colors"
                   >
-                    <span className="font-serif font-bold text-base sm:text-lg text-[#140C07]">
+                    <span className="font-serif font-bold text-sm sm:text-base md:text-lg text-[#140C07]">
                       {faq.question}
                     </span>
                     <ChevronDown
-                      className={`w-5 h-5 text-[#B88B58] shrink-0 transition-transform duration-300 ${
+                      className={`w-4 h-4 sm:w-5 sm:h-5 text-[#B88B58] shrink-0 transition-transform duration-300 ${
                         isOpen ? 'rotate-180 text-[#140C07]' : ''
                       }`}
                     />

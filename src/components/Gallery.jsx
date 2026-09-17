@@ -31,18 +31,18 @@ export default function Gallery() {
   ];
 
   return (
-    <section id="gallery" className="pt-20 md:pt-28 pb-12 bg-[#FAF7F2] text-[#140C07] overflow-hidden">
+    <section id="gallery" className="pt-16 sm:pt-20 md:pt-28 pb-10 sm:pb-12 bg-[#FAF7F2] text-[#140C07] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <Reveal effect="up" className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#B88B58] block mb-2.5">
+        <Reveal effect="up" className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+          <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#B88B58] block mb-2 sm:mb-2.5">
             Atmosphere &amp; Sanctuary
           </span>
-          <h2 className="font-serif font-bold text-3xl sm:text-4xl text-[#140C07] mb-4">
+          <h2 className="font-serif font-bold text-2xl sm:text-3xl md:text-4xl text-[#140C07] mb-3 sm:mb-4">
             A Glimpse into Our Coffee House
           </h2>
-          <p className="font-sans text-base text-[#6E6259] font-light leading-relaxed">
+          <p className="font-sans text-sm sm:text-base text-[#6E6259] font-light leading-relaxed">
             Soft brass lamps, natural linen textures, and the aroma of freshly ground Geisha coffees welcoming you from the bustling London streets.
           </p>
         </Reveal>
@@ -58,7 +58,7 @@ export default function Gallery() {
               className={`${item.span}`}
             >
               <div
-                className="relative h-full w-full rounded-2xl overflow-hidden shadow-xs hover:shadow-xl group border border-[#E8DFD5] transition-all duration-500"
+                className="relative h-full w-full rounded-2xl overflow-hidden shadow-xs hover:shadow-xl group border border-[#E8DFD5] transition-all duration-500 min-h-[220px]"
               >
                 <img
                   src={item.url}
@@ -67,8 +67,9 @@ export default function Gallery() {
                   loading="lazy"
                   decoding="async"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#140C07]/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                  <span className="text-[#FAF7F2] font-serif text-sm sm:text-base tracking-wide font-medium">
+                {/* Always show gentle title gradient on mobile/touch, full hover on sm+ */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#140C07]/85 via-[#140C07]/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4 sm:p-6">
+                  <span className="text-[#FAF7F2] font-serif text-xs sm:text-sm md:text-base tracking-wide font-medium">
                     {item.title}
                   </span>
                 </div>

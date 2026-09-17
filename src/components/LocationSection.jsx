@@ -4,33 +4,33 @@ import Reveal from './Reveal';
 
 export default function LocationSection() {
   return (
-    <section id="location" className="pt-12 pb-20 md:pt-16 md:pb-28 bg-[#FAF7F2] text-[#140C07] overflow-hidden">
+    <section id="location" className="pt-10 sm:pt-12 pb-16 sm:pb-20 md:pt-16 md:pb-28 bg-[#FAF7F2] text-[#140C07] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <Reveal effect="up" className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#B88B58] block mb-2.5">
+        <Reveal effect="up" className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+          <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#B88B58] block mb-2 sm:mb-2.5">
             The Destination
           </span>
-          <h2 className="font-serif font-bold text-3xl sm:text-4xl text-[#140C07] mb-4">
+          <h2 className="font-serif font-bold text-2xl sm:text-3xl md:text-4xl text-[#140C07] mb-3 sm:mb-4">
             Finding Our Mayfair Roastery
           </h2>
-          <p className="font-sans text-base text-[#6E6259] font-light leading-relaxed">
+          <p className="font-sans text-sm sm:text-base text-[#6E6259] font-light leading-relaxed">
             Nestled on historical Mount Street, moments from Grosvenor Square and Bond Street Station.
           </p>
         </Reveal>
 
         {/* 2 Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
           
           {/* Left Details Card */}
           <Reveal effect="right" className="lg:col-span-5 h-full">
-            <div className="h-full bg-white rounded-3xl p-8 sm:p-10 border border-[#E8DFD5] shadow-xs flex flex-col justify-between hover:border-[#B88B58]/30 transition-colors">
+            <div className="h-full bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-[#E8DFD5] shadow-xs flex flex-col justify-between hover:border-[#B88B58]/30 transition-colors">
               <div className="space-y-6">
                 
                 {/* Address */}
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[#FAF7F2] border border-[#E8DFD5] text-[#B88B58] flex items-center justify-center shrink-0">
+                <div className="flex items-start gap-3.5 sm:gap-4">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#FAF7F2] border border-[#E8DFD5] text-[#B88B58] flex items-center justify-center shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
@@ -47,8 +47,8 @@ export default function LocationSection() {
                 </div>
 
                 {/* Hours */}
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[#FAF7F2] border border-[#E8DFD5] text-[#B88B58] flex items-center justify-center shrink-0">
+                <div className="flex items-start gap-3.5 sm:gap-4">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#FAF7F2] border border-[#E8DFD5] text-[#B88B58] flex items-center justify-center shrink-0">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div className="w-full">
@@ -73,8 +73,8 @@ export default function LocationSection() {
                 </div>
 
                 {/* Contact & Socials */}
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[#FAF7F2] border border-[#E8DFD5] text-[#B88B58] flex items-center justify-center shrink-0">
+                <div className="flex items-start gap-3.5 sm:gap-4">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#FAF7F2] border border-[#E8DFD5] text-[#B88B58] flex items-center justify-center shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
@@ -114,8 +114,8 @@ export default function LocationSection() {
 
           {/* Right Map Iframe */}
           <Reveal effect="left" delay={150} className="lg:col-span-7 h-full">
-            <div className="h-full bg-white rounded-3xl overflow-hidden border border-[#E8DFD5] shadow-sm flex flex-col">
-              <div className="w-full h-80 sm:h-96 lg:h-full min-h-[380px]">
+            <div className="h-full bg-white rounded-3xl overflow-hidden border border-[#E8DFD5] shadow-sm flex flex-col min-h-[340px] sm:min-h-[400px]">
+              <div className="w-full h-72 sm:h-96 lg:h-full min-h-[300px] sm:min-h-[380px]">
                 <iframe
                   title="The Heritage and Roast Mayfair London Map"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.2384725350756!2d-0.15426172338023027!3d51.50974861058288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876052dc9359c19%3A0xe54b9d038222955f!2sMount%20St%2C%20London%20W1K%2C%20UK!5e0!3m2!1sen!2suk!4v1715000000000!5m2!1sen!2suk"
@@ -127,7 +127,7 @@ export default function LocationSection() {
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
-              <div className="p-4 bg-white border-t border-[#E8DFD5] text-center text-xs font-serif font-medium text-[#6E6259]">
+              <div className="p-3.5 sm:p-4 bg-white border-t border-[#E8DFD5] text-center text-xs font-serif font-medium text-[#6E6259]">
                 Valet Parking Available on Request • Secure Bicycle Stands in Courtyard
               </div>
             </div>

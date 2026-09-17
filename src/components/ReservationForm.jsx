@@ -44,43 +44,43 @@ export default function ReservationForm() {
   };
 
   return (
-    <section id="reservation" className="py-20 md:py-24 bg-[#140C07] text-[#FAF7F2] relative overflow-hidden">
+    <section id="reservation" className="py-16 sm:py-20 md:py-24 bg-[#140C07] text-[#FAF7F2] relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           
           {/* Left Narrative Text (Clean, Elegant & Minimalist) */}
-          <Reveal effect="right" className="lg:col-span-5">
+          <Reveal effect="right" className="lg:col-span-5 text-center lg:text-left">
             <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#B88B58] block mb-2">
               Guest Bookings
             </span>
-            <h2 className="font-serif font-bold text-3xl sm:text-4xl text-white mb-4 leading-tight">
+            <h2 className="font-serif font-bold text-2xl sm:text-3xl md:text-4xl text-white mb-3 sm:mb-4 leading-tight">
               Reserve Your Table
             </h2>
-            <p className="font-sans text-sm sm:text-base text-[#D4C7BC] leading-relaxed mb-8 font-light">
+            <p className="font-sans text-xs sm:text-sm md:text-base text-[#D4C7BC] leading-relaxed mb-6 sm:mb-8 font-light">
               Complimentary table bookings for morning brews, business meetings, and leisurely afternoon tea. Walk-ins are always welcomed daily.
             </p>
 
             {/* Clean Feature Highlights */}
-            <div className="space-y-4 mb-8 pt-6 border-t border-[#B88B58]/20">
+            <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 pt-5 sm:pt-6 border-t border-[#B88B58]/20 text-left">
               <div className="flex items-center gap-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58]" />
-                <span className="font-serif text-sm text-white font-semibold">Zero Deposit Required</span>
-                <span className="text-xs text-[#A8988C] font-light">• Complimentary bookings</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58] shrink-0" />
+                <span className="font-serif text-xs sm:text-sm text-white font-semibold">Zero Deposit Required</span>
+                <span className="text-[11px] sm:text-xs text-[#A8988C] font-light">• Complimentary bookings</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58]" />
-                <span className="font-serif text-sm text-white font-semibold">15-Minute Courtesy Hold</span>
-                <span className="text-xs text-[#A8988C] font-light">• Preserved for your arrival</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58] shrink-0" />
+                <span className="font-serif text-xs sm:text-sm text-white font-semibold">15-Minute Courtesy Hold</span>
+                <span className="text-[11px] sm:text-xs text-[#A8988C] font-light">• Preserved for your arrival</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58]" />
-                <span className="font-serif text-sm text-white font-semibold">Instant Digital Voucher</span>
-                <span className="text-xs text-[#A8988C] font-light">• Immediate reference ID</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58] shrink-0" />
+                <span className="font-serif text-xs sm:text-sm text-white font-semibold">Instant Digital Voucher</span>
+                <span className="text-[11px] sm:text-xs text-[#A8988C] font-light">• Immediate reference ID</span>
               </div>
             </div>
 
             {/* Direct Telephone Concierge (Subtle & Uncluttered) */}
-            <div className="flex items-center gap-3 text-xs text-[#C8B6A6] font-light">
+            <div className="flex items-center justify-center lg:justify-start gap-2.5 sm:gap-3 text-xs text-[#C8B6A6] font-light">
               <Phone className="w-3.5 h-3.5 text-[#B88B58] shrink-0" />
               <span>
                 Parties &gt; 8 guests? Call desk directly:{' '}
@@ -93,12 +93,12 @@ export default function ReservationForm() {
 
           {/* Right Form Card (Airy, Light & Sophisticated) */}
           <Reveal effect="left" delay={120} className="lg:col-span-7">
-            <div className="bg-white text-[#140C07] rounded-3xl p-6 sm:p-10 border border-[#E8DFD5] shadow-xl">
+            <div className="bg-white text-[#140C07] rounded-3xl p-5 sm:p-8 lg:p-10 border border-[#E8DFD5] shadow-xl">
               
               {!isSubmitted ? (
                 <>
-                  <div className="mb-6">
-                    <h3 className="font-serif font-bold text-2xl text-[#140C07] mb-1">
+                  <div className="mb-5 sm:mb-6">
+                    <h3 className="font-serif font-bold text-xl sm:text-2xl text-[#140C07] mb-1">
                       Table Reservation
                     </h3>
                     <p className="font-sans text-xs text-[#7A6D63] font-light">
@@ -106,7 +106,7 @@ export default function ReservationForm() {
                     </p>
                   </div>
 
-                  <form onSubmit={handleSubmit} className="space-y-4">
+                  <form onSubmit={handleSubmit} className="space-y-3.5 sm:space-y-4">
                     {/* Full Name */}
                     <div>
                       <label className="block text-[10px] font-bold uppercase tracking-wider text-[#140C07] mb-1.5">
@@ -119,12 +119,12 @@ export default function ReservationForm() {
                         placeholder="Your full name"
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-2.5 text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-1 focus:ring-[#B88B58] transition-all font-sans"
+                        className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 text-base sm:text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-1 focus:ring-[#B88B58] transition-all font-sans"
                       />
                     </div>
 
                     {/* Phone & Guests */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                       <div>
                         <label className="block text-[10px] font-bold uppercase tracking-wider text-[#140C07] mb-1.5">
                           Phone Number <span className="text-[#B88B58]">*</span>
@@ -136,7 +136,7 @@ export default function ReservationForm() {
                           placeholder="020 7946 0912"
                           value={formData.phone}
                           onChange={handleChange}
-                          className="w-full px-4 py-2.5 text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-1 focus:ring-[#B88B58] transition-all font-sans"
+                          className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 text-base sm:text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-1 focus:ring-[#B88B58] transition-all font-sans"
                         />
                       </div>
 
@@ -148,7 +148,7 @@ export default function ReservationForm() {
                           name="guests"
                           value={formData.guests}
                           onChange={handleChange}
-                          className="w-full px-4 py-2.5 text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-1 focus:ring-[#B88B58] transition-all font-sans"
+                          className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 text-base sm:text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-1 focus:ring-[#B88B58] transition-all font-sans"
                         >
                           <option value="1 Guest">1 Guest</option>
                           <option value="2 Guests">2 Guests</option>
@@ -160,7 +160,7 @@ export default function ReservationForm() {
                     </div>
 
                     {/* Date & Time */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                       <div>
                         <label className="block text-[10px] font-bold uppercase tracking-wider text-[#140C07] mb-1.5">
                           Date <span className="text-[#B88B58]">*</span>
@@ -172,7 +172,7 @@ export default function ReservationForm() {
                           required
                           value={formData.date}
                           onChange={handleChange}
-                          className="w-full px-4 py-2.5 text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-1 focus:ring-[#B88B58] transition-all font-sans"
+                          className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 text-base sm:text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-1 focus:ring-[#B88B58] transition-all font-sans"
                         />
                       </div>
 
@@ -186,7 +186,7 @@ export default function ReservationForm() {
                           required
                           value={formData.time}
                           onChange={handleChange}
-                          className="w-full px-4 py-2.5 text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-1 focus:ring-[#B88B58] transition-all font-sans"
+                          className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 text-base sm:text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-1 focus:ring-[#B88B58] transition-all font-sans"
                         />
                       </div>
                     </div>
@@ -200,7 +200,7 @@ export default function ReservationForm() {
                         name="seating"
                         value={formData.seating}
                         onChange={handleChange}
-                        className="w-full px-4 py-2.5 text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-1 focus:ring-[#B88B58] transition-all font-sans"
+                        className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 text-base sm:text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-1 focus:ring-[#B88B58] transition-all font-sans"
                       >
                         <option value="Main Coffee Lounge">Main Coffee Lounge</option>
                         <option value="Library Mezzanine">Library Mezzanine</option>
@@ -220,7 +220,7 @@ export default function ReservationForm() {
                         placeholder="e.g. Bringing polite dog, window seat preferred"
                         value={formData.notes}
                         onChange={handleChange}
-                        className="w-full px-4 py-2.5 text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-1 focus:ring-[#B88B58] transition-all font-sans"
+                        className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 text-base sm:text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-1 focus:ring-[#B88B58] transition-all font-sans"
                       />
                     </div>
 

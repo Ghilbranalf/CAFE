@@ -64,6 +64,25 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close mobile drawer on Escape key & manage scroll lock
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setIsOpen(false);
+    };
+
+    if (isOpen) {
+      window.addEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   const navLinks = [
     { label: 'The Craft', href: '#craft' },
     { label: 'Curated Menu', href: '#menu' },
@@ -76,15 +95,15 @@ export default function Navbar() {
   return (
     <>
       {/* Editorial Announcement Ribbon (Minimal & Classical) */}
-      <aside className="bg-[#140C07] text-[#D8C7B8] text-[11px] py-2.5 border-b border-[#B88B58]/20 tracking-[0.18em] uppercase select-none font-sans">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-between items-center gap-3">
+      <aside className="bg-[#140C07] text-[#D8C7B8] text-[10px] sm:text-[11px] py-2 sm:py-2.5 border-b border-[#B88B58]/20 tracking-[0.14em] sm:tracking-[0.18em] uppercase select-none font-sans">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-1.5 sm:gap-3 text-center sm:text-left">
           
           {/* Location & Status */}
-          <div className="flex items-center gap-3">
-            <span className="text-[#B88B58] font-semibold hidden sm:inline">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <span className="text-[#B88B58] font-semibold hidden md:inline">
               No. 42 Mount Street, Mayfair
             </span>
-            <span className="text-[#B88B58]/40 hidden sm:inline">|</span>
+            <span className="text-[#B88B58]/40 hidden md:inline">|</span>
             <span className="flex items-center gap-2 text-[#FAF7F2]/90">
               <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58] animate-pulse"></span>
               <span>{storeStatus.text}</span>
@@ -92,8 +111,8 @@ export default function Navbar() {
           </div>
 
           {/* Concierge & Walk-in note */}
-          <div className="flex items-center gap-6 text-[10px] text-[#B88B58]">
-            <span className="hidden md:inline tracking-[0.22em] text-[#C4B3A3]">
+          <div className="flex items-center gap-4 sm:gap-6 text-[10px] text-[#B88B58]">
+            <span className="hidden sm:inline tracking-[0.22em] text-[#C4B3A3]">
               Walk-Ins Welcomed Daily
             </span>
             <a
@@ -116,13 +135,13 @@ export default function Navbar() {
             : 'bg-[#FAF7F2] border-b border-[#E8DFD5]/80'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 lg:h-24 flex items-center justify-between">
           
           {/* Bespoke Heritage Brand Crest & Wordmark */}
-          <a href="#hero" className="flex items-center gap-3.5 group">
+          <a href="#hero" className="flex items-center gap-2.5 sm:gap-3.5 group min-w-0">
             {/* Custom Monogram Seal */}
-            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full border border-[#B88B58] bg-[#140C07] text-[#B88B58] flex items-center justify-center shrink-0 shadow-sm relative group-hover:border-[#FAF7F2] transition-colors">
-              <svg viewBox="0 0 100 100" className="w-8 h-8 fill-current">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-[#B88B58] bg-[#140C07] text-[#B88B58] flex items-center justify-center shrink-0 shadow-sm relative group-hover:border-[#FAF7F2] transition-colors">
+              <svg viewBox="0 0 100 100" className="w-7 h-7 sm:w-8 sm:h-8 fill-current">
                 {/* Decorative outer ring */}
                 <circle cx="50" cy="50" r="46" fill="none" stroke="#B88B58" strokeWidth="1.5" strokeDasharray="2 3" />
                 <circle cx="50" cy="50" r="41" fill="none" stroke="#B88B58" strokeWidth="1" />
@@ -143,8 +162,8 @@ export default function Navbar() {
             </div>
 
             {/* Typography */}
-            <div className="flex flex-col">
-              <span className="font-serif font-bold text-lg sm:text-xl tracking-[0.14em] text-[#140C07] uppercase leading-tight group-hover:text-[#B88B58] transition-colors">
+            <div className="flex flex-col truncate">
+              <span className="font-serif font-bold text-base sm:text-lg lg:text-xl tracking-[0.08em] sm:tracking-[0.14em] text-[#140C07] uppercase leading-tight group-hover:text-[#B88B58] transition-colors truncate">
                 The Heritage {"&"} Roast
               </span>
             </div>
@@ -164,11 +183,11 @@ export default function Navbar() {
           </nav>
 
           {/* Bespoke Table Booking CTA (Sharp Editorial Style with Magnetic Pull) */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 sm:gap-4 shrink-0">
             <MagneticButton
               href="#reservation"
               strength={0.22}
-              className="shimmer-btn hidden sm:inline-flex items-center gap-2 px-6 py-3 bg-[#140C07] hover:bg-[#2A1C14] text-[#FAF7F2] text-[11px] font-bold uppercase tracking-[0.22em] border border-[#B88B58]/50 shadow-xs hover:shadow-md transition-all hover:border-[#B88B58] group cursor-pointer rounded-xl"
+              className="shimmer-btn hidden sm:inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-[#140C07] hover:bg-[#2A1C14] text-[#FAF7F2] text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] border border-[#B88B58]/50 shadow-xs hover:shadow-md transition-all hover:border-[#B88B58] group cursor-pointer rounded-xl"
             >
               <span>Reserve a Table</span>
               <span className="text-[#B88B58] group-hover:translate-x-1 transition-transform duration-300">→</span>
@@ -177,7 +196,7 @@ export default function Navbar() {
             {/* Mobile Hamburger Toggle */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2.5 rounded-xl border border-[#E8DFD5] text-[#140C07] hover:bg-[#F3EDE4] transition-colors"
+              className="lg:hidden p-2.5 rounded-xl border border-[#E8DFD5] text-[#140C07] hover:bg-[#F3EDE4] transition-colors cursor-pointer"
               aria-label="Toggle Menu"
             >
               {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -185,29 +204,38 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Navigation Drawer */}
+        {/* Mobile Navigation Drawer with Overlay */}
         {isOpen && (
-          <div className="lg:hidden bg-[#FAF7F2] border-b border-[#E8DFD5] px-6 py-8 shadow-xl animate-in fade-in duration-200">
-            <div className="flex flex-col gap-5 text-center">
-              {navLinks.map((link) => (
+          <>
+            {/* Backdrop overlay for touch click outside */}
+            <div
+              className="fixed inset-0 top-[110px] sm:top-[128px] bg-black/40 backdrop-blur-xs z-40 lg:hidden"
+              onClick={() => setIsOpen(false)}
+              aria-hidden="true"
+            />
+            
+            <div className="lg:hidden relative z-50 bg-[#FAF7F2] border-b border-[#E8DFD5] px-6 py-8 shadow-2xl max-h-[calc(100vh-120px)] overflow-y-auto animate-in fade-in duration-200">
+              <div className="max-w-md mx-auto flex flex-col gap-4 text-center">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-xs font-semibold uppercase tracking-[0.22em] text-[#140C07] hover:text-[#B88B58] py-2.5 border-b border-[#E8DFD5]/40 transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                ))}
                 <a
-                  key={link.label}
-                  href={link.href}
+                  href="#reservation"
                   onClick={() => setIsOpen(false)}
-                  className="text-xs font-semibold uppercase tracking-[0.22em] text-[#140C07] hover:text-[#B88B58] py-1 border-b border-[#E8DFD5]/40"
+                  className="mt-2 py-3.5 px-6 rounded-xl bg-[#140C07] text-[#FAF7F2] text-xs uppercase tracking-[0.22em] font-bold border border-[#B88B58]/40 shadow-sm hover:bg-[#2A1C14] transition-colors"
                 >
-                  {link.label}
+                  Reserve a Table →
                 </a>
-              ))}
-              <a
-                href="#reservation"
-                onClick={() => setIsOpen(false)}
-                className="mt-3 py-3.5 px-6 rounded-xl bg-[#140C07] text-[#FAF7F2] text-xs uppercase tracking-[0.22em] font-bold border border-[#B88B58]/40 shadow-sm"
-              >
-                Reserve a Table →
-              </a>
+              </div>
             </div>
-          </div>
+          </>
         )}
       </header>
     </>

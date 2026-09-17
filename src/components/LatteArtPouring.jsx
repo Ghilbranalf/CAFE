@@ -66,39 +66,42 @@ export default function LatteArtPouring({ className = '' }) {
       <div className="absolute top-3.5 right-3.5 z-20 flex items-center gap-2">
         <button
           onClick={handleToggleMute}
-          className="p-2 rounded-full bg-[#140C07]/70 hover:bg-[#140C07] backdrop-blur-md text-[#FAF7F2] border border-white/15 transition-all opacity-0 group-hover:opacity-100 cursor-pointer shadow-md"
+          className="p-2.5 sm:p-2 rounded-full bg-[#140C07]/80 hover:bg-[#140C07] backdrop-blur-md text-[#FAF7F2] border border-white/20 transition-all opacity-90 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer shadow-md"
           title={isMuted ? 'Unmute Audio' : 'Mute Audio'}
+          aria-label={isMuted ? 'Unmute Audio' : 'Mute Audio'}
         >
-          {isMuted ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5" />}
+          {isMuted ? <VolumeX className="w-4 h-4 sm:w-3.5 sm:h-3.5" /> : <Volume2 className="w-4 h-4 sm:w-3.5 sm:h-3.5" />}
         </button>
       </div>
 
       {/* 4. Bottom Sleek Controls Bar */}
-      <div className="absolute bottom-0 inset-x-0 z-20 px-4 py-3 bg-gradient-to-t from-[#140C07]/90 via-[#140C07]/60 to-transparent flex items-center justify-between opacity-90 group-hover:opacity-100 transition-opacity">
+      <div className="absolute bottom-0 inset-x-0 z-20 px-3.5 sm:px-4 py-2.5 sm:py-3 bg-gradient-to-t from-[#140C07]/90 via-[#140C07]/60 to-transparent flex items-center justify-between opacity-95 sm:opacity-90 sm:group-hover:opacity-100 transition-opacity">
         
         {/* Play / Pause & Replay */}
         <div className="flex items-center gap-2">
           <button
             onClick={handleTogglePlay}
-            className="p-1.5 rounded-full bg-[#140C07]/80 hover:bg-[#B88B58] text-[#FAF7F2] hover:text-[#140C07] border border-[#B88B58]/40 transition-all cursor-pointer shadow"
+            className="p-2 sm:p-1.5 rounded-full bg-[#140C07]/80 hover:bg-[#B88B58] text-[#FAF7F2] hover:text-[#140C07] border border-[#B88B58]/40 transition-all cursor-pointer shadow"
             title={isPlaying ? 'Pause' : 'Play'}
+            aria-label={isPlaying ? 'Pause' : 'Play'}
           >
             {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
           </button>
           
           <button
             onClick={handleRestart}
-            className="p-1.5 rounded-full bg-[#140C07]/80 hover:bg-[#B88B58] text-[#FAF7F2] hover:text-[#140C07] border border-[#B88B58]/40 transition-all cursor-pointer shadow"
+            className="p-2 sm:p-1.5 rounded-full bg-[#140C07]/80 hover:bg-[#B88B58] text-[#FAF7F2] hover:text-[#140C07] border border-[#B88B58]/40 transition-all cursor-pointer shadow"
             title="Replay from Start"
+            aria-label="Replay from Start"
           >
             <RotateCcw className="w-3.5 h-3.5" />
           </button>
         </div>
 
         {/* Live Indicator */}
-        <div className="flex items-center gap-2 text-[10px] uppercase font-sans tracking-[0.2em] text-[#FAF7F2]/90">
+        <div className="flex items-center gap-1.5 sm:gap-2 text-[9px] sm:text-[10px] uppercase font-sans tracking-[0.16em] sm:tracking-[0.2em] text-[#FAF7F2]/90">
           <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58] animate-pulse"></span>
-          <span>Master Barista Free-Pour</span>
+          <span>Master Barista Pour</span>
         </div>
       </div>
 

@@ -20,7 +20,14 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 96px;
+  scroll-padding-top: 80px;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (min-width: 640px) {
+  html {
+    scroll-padding-top: 96px;
+  }
 }
 
 body {
@@ -28,6 +35,7 @@ body {
   background-color: var(--color-heritage-crema);
   color: var(--color-heritage-text);
   overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .font-cormorant {
