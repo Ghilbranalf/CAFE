@@ -93,7 +93,7 @@ export default function MenuSection() {
 
                   {/* Dine-In Experience CTA */}
                   <a
-                    href="#location"
+                    href="#reservation"
                     className="shimmer-btn w-full py-2.5 px-4 rounded-xl border border-[#E8DFD5] hover:border-[#140C07] bg-[#FAF7F2] hover:bg-[#140C07] text-[#140C07] hover:text-[#FAF7F2] text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 transition-all duration-300"
                   >
                     <Coffee className="w-3.5 h-3.5 text-[#B88B58]" />
@@ -163,10 +163,10 @@ export default function MenuSection() {
             </div>
 
             <a
-              href="#location"
+              href="#reservation"
               className="shimmer-btn shrink-0 inline-flex items-center gap-2 px-8 py-4 bg-[#B88B58] hover:bg-[#9E7445] text-white text-xs uppercase tracking-widest font-bold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              <span>Visit Mayfair Roastery</span>
+              <span>Book Tasting Table</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>

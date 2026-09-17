@@ -81,10 +81,10 @@ export default function Facilities() {
             </div>
 
             <a
-              href="#location"
+              href="#reservation"
               className="shimmer-btn shrink-0 inline-flex items-center gap-2 px-8 py-4 bg-[#B88B58] hover:bg-[#9E7445] text-white text-xs uppercase tracking-widest font-bold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              <span>Visit The Parlour</span>
+              <span>Reserve The Parlour</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>

@@ -6,6 +6,7 @@ import MenuSection from './components/MenuSection';
 import Facilities from './components/Facilities';
 import Gallery from './components/Gallery';
 import Reviews from './components/Reviews';
+import ReservationForm from './components/ReservationForm';
 import FaqSection from './components/FaqSection';
 import LocationSection from './components/LocationSection';
 import Footer from './components/Footer';
@@ -61,8 +62,20 @@ export default function App() {
         <Gallery />
         <Reviews />
 
+        {/* 🌊 Wave transition: Light Reviews -> Dark Table Reservation */}
+        <WaveDivider fill="#140C07" flipX={false} />
+
         {/* ==============================================================
-            SECTION 6: FAQ & MAYFAIR LOCATION (LIGHT THEME)
+            SECTION 6: TABLE RESERVATION & ENQUIRIES (DARK THEME)
+            Deep Espresso Background with High-Contrast Luxury Booking Form
+           ============================================================== */}
+        <ReservationForm />
+
+        {/* 🌊 Wave transition: Dark Reservation -> Light FAQ & Location */}
+        <WaveDivider fill="#FAF7F2" flipX={true} />
+
+        {/* ==============================================================
+            SECTION 7: FAQ & MAYFAIR LOCATION (LIGHT THEME)
             Linen Background with Dark Accordion & Interactive Map
            ============================================================== */}
         <FaqSection />

@@ -120,11 +120,11 @@ export default function Hero() {
               </MagneticButton>
               
               <MagneticButton
-                href="#location"
+                href="#reservation"
                 strength={0.18}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3 px-2 text-[#140C07] hover:text-[#B88B58] text-[11px] font-semibold uppercase tracking-[0.22em] border-b border-[#140C07]/30 hover:border-[#B88B58] transition-all group cursor-pointer"
               >
-                <span>Location &amp; Opening Hours</span>
+                <span>Reserve a Table</span>
                 <span className="text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300">↗</span>
               </MagneticButton>
             </div>

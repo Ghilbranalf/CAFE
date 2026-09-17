@@ -166,11 +166,11 @@ export default function Navbar() {
           {/* Bespoke Table Booking CTA (Sharp Editorial Style with Magnetic Pull) */}
           <div className="flex items-center gap-4">
             <MagneticButton
-              href="#location"
+              href="#reservation"
               strength={0.22}
               className="shimmer-btn hidden sm:inline-flex items-center gap-2 px-6 py-3 bg-[#140C07] hover:bg-[#2A1C14] text-[#FAF7F2] text-[11px] font-bold uppercase tracking-[0.22em] border border-[#B88B58]/50 shadow-xs hover:shadow-md transition-all hover:border-[#B88B58] group cursor-pointer rounded-xl"
             >
-              <span>Visit Mayfair</span>
+              <span>Reserve a Table</span>
               <span className="text-[#B88B58] group-hover:translate-x-1 transition-transform duration-300">→</span>
             </MagneticButton>
 
@@ -200,11 +200,11 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="#location"
+                href="#reservation"
                 onClick={() => setIsOpen(false)}
                 className="mt-3 py-3.5 px-6 rounded-xl bg-[#140C07] text-[#FAF7F2] text-xs uppercase tracking-[0.22em] font-bold border border-[#B88B58]/40 shadow-sm"
               >
-                Visit Mayfair →
+                Reserve a Table →
               </a>
             </div>
           </div>
