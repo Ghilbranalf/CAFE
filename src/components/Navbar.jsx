@@ -182,16 +182,19 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Bespoke Table Booking CTA (Sharp Editorial Style with Magnetic Pull) */}
+          {/* Bespoke Table Booking CTA & Hamburger */}
           <div className="flex items-center gap-3 sm:gap-4 shrink-0">
-            <MagneticButton
-              href="#reservation"
-              strength={0.22}
-              className="shimmer-btn hidden lg:inline-flex items-center gap-2 px-6 py-3 bg-[#140C07] hover:bg-[#2A1C14] text-[#FAF7F2] text-[11px] font-bold uppercase tracking-[0.2em] border border-[#B88B58]/50 shadow-xs hover:shadow-md transition-all hover:border-[#B88B58] group cursor-pointer rounded-xl"
-            >
-              <span>Reserve a Table</span>
-              <span className="text-[#B88B58] group-hover:translate-x-1 transition-transform duration-300">→</span>
-            </MagneticButton>
+            {/* Desktop Only Reservation Button */}
+            <div className="hidden lg:block">
+              <MagneticButton
+                href="#reservation"
+                strength={0.22}
+                className="shimmer-btn inline-flex items-center gap-2 px-6 py-3 bg-[#140C07] hover:bg-[#2A1C14] text-[#FAF7F2] text-[11px] font-bold uppercase tracking-[0.2em] border border-[#B88B58]/50 shadow-xs hover:shadow-md transition-all hover:border-[#B88B58] group cursor-pointer rounded-xl"
+              >
+                <span>Reserve a Table</span>
+                <span className="text-[#B88B58] group-hover:translate-x-1 transition-transform duration-300">→</span>
+              </MagneticButton>
+            </div>
 
             {/* Mobile / Tablet Hamburger Toggle */}
             <button
