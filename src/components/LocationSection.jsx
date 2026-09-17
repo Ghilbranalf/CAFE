@@ -41,7 +41,7 @@ export default function LocationSection() {
                       42 Mount Street, Mayfair, London W1K 2RN, United Kingdom
                     </p>
                     <span className="text-xs text-[#B88B58] font-semibold mt-1 block">
-                      🚇 4-minute walk from Bond Street Station (Elizabeth &amp; Jubilee Lines)
+                      4-minute walk from Bond Street Station (Elizabeth &amp; Jubilee Lines)
                     </span>
                   </div>
                 </div>

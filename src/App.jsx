@@ -25,7 +25,7 @@ export default function App() {
            ============================================================== */}
         <Hero />
 
-        {/* 🌊 Wave transition: Light Hero -> Dark The Craft */}
+        {/* Wave transition: Light Hero -> Dark The Craft */}
         <WaveDivider fill="#140C07" flipX={false} />
 
         {/* ==============================================================
@@ -34,7 +34,7 @@ export default function App() {
            ============================================================== */}
         <Values />
 
-        {/* 🌊 Wave transition: Dark The Craft -> Light Menu */}
+        {/* Wave transition: Dark The Craft -> Light Menu */}
         <WaveDivider fill="#FAF7F2" flipX={true} />
 
         {/* ==============================================================
@@ -43,7 +43,7 @@ export default function App() {
            ============================================================== */}
         <MenuSection />
 
-        {/* 🌊 Wave transition: Light Menu -> Dark Parlour & Facilities */}
+        {/* Wave transition: Light Menu -> Dark Parlour & Facilities */}
         <WaveDivider fill="#160E08" flipX={false} />
 
         {/* ==============================================================
@@ -52,7 +52,7 @@ export default function App() {
            ============================================================== */}
         <Facilities />
 
-        {/* 🌊 Wave transition: Dark Parlour -> Light Gallery & Reviews */}
+        {/* Wave transition: Dark Parlour -> Light Gallery & Reviews */}
         <WaveDivider fill="#FAF7F2" flipX={true} />
 
         {/* ==============================================================
@@ -62,7 +62,7 @@ export default function App() {
         <Gallery />
         <Reviews />
 
-        {/* 🌊 Wave transition: Light Reviews -> Dark Table Reservation */}
+        {/* Wave transition: Light Reviews -> Dark Table Reservation */}
         <WaveDivider fill="#140C07" flipX={false} />
 
         {/* ==============================================================
@@ -71,7 +71,7 @@ export default function App() {
            ============================================================== */}
         <ReservationForm />
 
-        {/* 🌊 Wave transition: Dark Reservation -> Light FAQ & Location */}
+        {/* Wave transition: Dark Reservation -> Light FAQ & Location */}
         <WaveDivider fill="#FAF7F2" flipX={true} />
 
         {/* ==============================================================
@@ -81,7 +81,7 @@ export default function App() {
         <FaqSection />
         <LocationSection />
 
-        {/* 🌊 Wave transition: Light Location -> Dark Footer */}
+        {/* Wave transition: Light Location -> Dark Footer */}
         <WaveDivider fill="#140C07" flipX={false} />
       </main>
 

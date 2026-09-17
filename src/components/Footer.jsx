@@ -103,7 +103,7 @@ export default function Footer() {
             </div>
 
             <div className="bg-white/5 border border-white/10 rounded-xl p-3 text-xs text-[#D6C7BC] font-serif">
-              ✨ <strong>100% SCA Speciality Grade</strong> • Minor Figures Organic Oat Milk Complimentary
+              <strong>100% SCA Speciality Grade</strong> • Minor Figures Organic Oat Milk Complimentary
             </div>
           </div>
 

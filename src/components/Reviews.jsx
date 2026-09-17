@@ -103,7 +103,7 @@ export default function Reviews() {
               rel="noopener noreferrer"
               className="shimmer-btn px-7 py-3.5 rounded-xl border border-[#140C07] text-[#140C07] hover:bg-[#140C07] hover:text-[#FAF7F2] text-xs uppercase tracking-widest font-bold transition-all duration-300"
             >
-              Leave a Google Review ⭐
+              Leave a Google Review
             </a>
           </div>
         </Reveal>
