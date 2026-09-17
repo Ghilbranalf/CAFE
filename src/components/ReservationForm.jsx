@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, Phone, Clock, ShieldCheck, HeartHandshake, CheckCircle2, RotateCcw } from 'lucide-react';
+import { Send, Clock, CheckCircle2, RotateCcw, Calendar, Users, Phone } from 'lucide-react';
 import Reveal from './Reveal';
 
 export default function ReservationForm() {
@@ -8,10 +8,10 @@ export default function ReservationForm() {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    guests: '2 Guests (Conversation / Meeting)',
+    guests: '2 Guests',
     date: today,
     time: '14:30',
-    seating: 'Main Coffee Lounge (Quiet & Plugs)',
+    seating: 'Main Coffee Lounge',
     notes: '',
   });
 
@@ -35,151 +35,135 @@ export default function ReservationForm() {
     setFormData({
       name: '',
       phone: '',
-      guests: '2 Guests (Conversation / Meeting)',
+      guests: '2 Guests',
       date: today,
       time: '14:30',
-      seating: 'Main Coffee Lounge (Quiet & Plugs)',
+      seating: 'Main Coffee Lounge',
       notes: '',
     });
   };
 
   return (
-    <section id="reservation" className="py-20 md:py-28 bg-[#140C07] text-[#FAF7F2] relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+    <section id="reservation" className="py-20 md:py-24 bg-[#140C07] text-[#FAF7F2] relative overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* Left Narrative Text (Dark Theme) */}
+          {/* Left Narrative Text (Clean, Elegant & Minimalist) */}
           <Reveal effect="right" className="lg:col-span-5">
-            <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#B88B58] block mb-2.5">
+            <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#B88B58] block mb-2">
               Guest Bookings
             </span>
-            <h2 className="font-serif font-bold text-3xl sm:text-4xl text-white mb-4">
-              Reserve Your Table in Advance
+            <h2 className="font-serif font-bold text-3xl sm:text-4xl text-white mb-4 leading-tight">
+              Reserve Your Table
             </h2>
-            <p className="font-sans text-base text-[#D4C7BC] leading-relaxed mb-8 font-light">
-              We warmly recommend securing your preferred seating for afternoon tea, breakfast meetings, or weekend brunch. Regular table bookings are entirely complimentary with zero minimum spend.
+            <p className="font-sans text-sm sm:text-base text-[#D4C7BC] leading-relaxed mb-8 font-light">
+              Complimentary table bookings for morning brews, business meetings, and leisurely afternoon tea. Walk-ins are always welcomed daily.
             </p>
 
-            <div className="space-y-5 mb-10">
-              <div className="flex items-start gap-3.5 group">
-                <div className="w-9 h-9 rounded-full bg-[#2A1C14] border border-[#B88B58]/40 text-[#B88B58] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#B88B58] group-hover:text-[#140C07] transition-all duration-300">
-                  <Clock className="w-4 h-4" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-serif font-bold text-white">Prompt Table Preparation</h4>
-                  <p className="text-xs text-[#C8B6A6] font-light">Our maître d' registers your arrival time and prepares your curated seating.</p>
-                </div>
+            {/* Clean Feature Highlights */}
+            <div className="space-y-4 mb-8 pt-6 border-t border-[#B88B58]/20">
+              <div className="flex items-center gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58]" />
+                <span className="font-serif text-sm text-white font-semibold">Zero Deposit Required</span>
+                <span className="text-xs text-[#A8988C] font-light">• Complimentary bookings</span>
               </div>
-
-              <div className="flex items-start gap-3.5 group">
-                <div className="w-9 h-9 rounded-full bg-[#2A1C14] border border-[#B88B58]/40 text-[#B88B58] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#B88B58] group-hover:text-[#140C07] transition-all duration-300">
-                  <ShieldCheck className="w-4 h-4" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-serif font-bold text-white">Complimentary Regular Bookings</h4>
-                  <p className="text-xs text-[#C8B6A6] font-light">No deposit required for parties up to 8 guests in our main lounge.</p>
-                </div>
+              <div className="flex items-center gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58]" />
+                <span className="font-serif text-sm text-white font-semibold">15-Minute Courtesy Hold</span>
+                <span className="text-xs text-[#A8988C] font-light">• Preserved for your arrival</span>
               </div>
-
-              <div className="flex items-start gap-3.5 group">
-                <div className="w-9 h-9 rounded-full bg-[#2A1C14] border border-[#B88B58]/40 text-[#B88B58] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#B88B58] group-hover:text-[#140C07] transition-all duration-300">
-                  <HeartHandshake className="w-4 h-4" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-serif font-bold text-white">15-Minute Courtesy Hold</h4>
-                  <p className="text-xs text-[#C8B6A6] font-light">Your table is attentively preserved for 15 minutes past arrival time.</p>
-                </div>
+              <div className="flex items-center gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58]" />
+                <span className="font-serif text-sm text-white font-semibold">Instant Digital Voucher</span>
+                <span className="text-xs text-[#A8988C] font-light">• Immediate reference ID</span>
               </div>
             </div>
 
-            {/* Direct Telephone Concierge */}
-            <div className="bg-[#1F140D] rounded-2xl p-6 border border-[#B88B58]/30 flex items-center gap-4 shadow-xl hover:border-[#B88B58]/70 transition-colors">
-              <div className="w-12 h-12 rounded-xl bg-[#2A1C14] border border-[#B88B58]/40 text-[#B88B58] flex items-center justify-center shrink-0">
-                <Phone className="w-5 h-5" />
-              </div>
-              <div>
-                <span className="text-xs text-[#C8B6A6] block font-light">Prefer telephone assistance or parties &gt; 8?</span>
-                <a
-                  href="tel:+442079460912"
-                  className="font-serif text-lg font-bold text-white hover:text-[#B88B58] transition-colors"
-                >
+            {/* Direct Telephone Concierge (Subtle & Uncluttered) */}
+            <div className="flex items-center gap-3 text-xs text-[#C8B6A6] font-light">
+              <Phone className="w-3.5 h-3.5 text-[#B88B58] shrink-0" />
+              <span>
+                Parties &gt; 8 guests? Call desk directly:{' '}
+                <a href="tel:+442079460912" className="text-white hover:text-[#B88B58] font-medium transition-colors">
                   +44 (0) 20 7946 0912
                 </a>
-              </div>
+              </span>
             </div>
           </Reveal>
 
-          {/* Right Form Card (High Contrast White & Dark Classic) */}
-          <Reveal effect="left" delay={150} className="lg:col-span-7">
-            <div className="bg-white text-[#140C07] rounded-3xl p-8 sm:p-12 border border-[#E8DFD5] shadow-2xl">
+          {/* Right Form Card (Airy, Light & Sophisticated) */}
+          <Reveal effect="left" delay={120} className="lg:col-span-7">
+            <div className="bg-white text-[#140C07] rounded-3xl p-6 sm:p-10 border border-[#E8DFD5] shadow-xl">
               
               {!isSubmitted ? (
                 <>
-                  <h3 className="font-serif font-bold text-2xl sm:text-3xl text-[#140C07] mb-2">
-                    Table Reservation Request
-                  </h3>
-                  <p className="font-sans text-xs sm:text-sm text-[#6E6259] mb-8 font-light">
-                    Kindly complete your details below to place your booking directly with our front desk.
-                  </p>
+                  <div className="mb-6">
+                    <h3 className="font-serif font-bold text-2xl text-[#140C07] mb-1">
+                      Table Reservation
+                    </h3>
+                    <p className="font-sans text-xs text-[#7A6D63] font-light">
+                      Please enter your details to register directly with our front desk.
+                    </p>
+                  </div>
 
-                  <form onSubmit={handleSubmit} className="space-y-5">
-                    {/* Name */}
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    {/* Full Name */}
                     <div>
-                      <label className="block text-[11px] font-bold uppercase tracking-wider text-[#140C07] mb-2">
+                      <label className="block text-[10px] font-bold uppercase tracking-wider text-[#140C07] mb-1.5">
                         Full Name <span className="text-[#B88B58]">*</span>
                       </label>
                       <input
                         type="text"
                         name="name"
                         required
-                        placeholder="e.g. Lord Alexander Hastings / Lady Eleanor Vance / Mr James Sterling"
+                        placeholder="Your full name"
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-2 focus:ring-[#B88B58]/20 transition-all font-sans"
+                        className="w-full px-4 py-2.5 text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-1 focus:ring-[#B88B58] transition-all font-sans"
                       />
                     </div>
 
-                    {/* Phone & Party */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    {/* Phone & Guests */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-[11px] font-bold uppercase tracking-wider text-[#140C07] mb-2">
-                          Contact Telephone (UK / International) <span className="text-[#B88B58]">*</span>
+                        <label className="block text-[10px] font-bold uppercase tracking-wider text-[#140C07] mb-1.5">
+                          Phone Number <span className="text-[#B88B58]">*</span>
                         </label>
                         <input
                           type="tel"
                           name="phone"
                           required
-                          placeholder="e.g. 020 7946 0912 or 07700 900077"
+                          placeholder="020 7946 0912"
                           value={formData.phone}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-2 focus:ring-[#B88B58]/20 transition-all font-sans"
+                          className="w-full px-4 py-2.5 text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-1 focus:ring-[#B88B58] transition-all font-sans"
                         />
                       </div>
 
                       <div>
-                        <label className="block text-[11px] font-bold uppercase tracking-wider text-[#140C07] mb-2">
+                        <label className="block text-[10px] font-bold uppercase tracking-wider text-[#140C07] mb-1.5">
                           Party Size <span className="text-[#B88B58]">*</span>
                         </label>
                         <select
                           name="guests"
                           value={formData.guests}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-2 focus:ring-[#B88B58]/20 transition-all font-sans"
+                          className="w-full px-4 py-2.5 text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-1 focus:ring-[#B88B58] transition-all font-sans"
                         >
-                          <option value="1 Guest (Quiet Work / Reading)">1 Guest (Quiet Work / Reading)</option>
-                          <option value="2 Guests (Conversation / Meeting)">2 Guests (Conversation / Meeting)</option>
-                          <option value="3 - 4 Guests (Small Gathering)">3 - 4 Guests (Small Gathering)</option>
-                          <option value="5 - 8 Guests (Group Brunch)">5 - 8 Guests (Group Brunch)</option>
-                          <option value="9+ Guests (Private Parlour Hire)">9+ Guests (Private Parlour Hire)</option>
+                          <option value="1 Guest">1 Guest</option>
+                          <option value="2 Guests">2 Guests</option>
+                          <option value="3 – 4 Guests">3 – 4 Guests</option>
+                          <option value="5 – 8 Guests">5 – 8 Guests</option>
+                          <option value="9+ Guests (Private Parlour)">9+ Guests (Private Parlour)</option>
                         </select>
                       </div>
                     </div>
 
                     {/* Date & Time */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-[11px] font-bold uppercase tracking-wider text-[#140C07] mb-2">
-                          Date of Visit <span className="text-[#B88B58]">*</span>
+                        <label className="block text-[10px] font-bold uppercase tracking-wider text-[#140C07] mb-1.5">
+                          Date <span className="text-[#B88B58]">*</span>
                         </label>
                         <input
                           type="date"
@@ -188,13 +172,13 @@ export default function ReservationForm() {
                           required
                           value={formData.date}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-2 focus:ring-[#B88B58]/20 transition-all font-sans"
+                          className="w-full px-4 py-2.5 text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-1 focus:ring-[#B88B58] transition-all font-sans"
                         />
                       </div>
 
                       <div>
-                        <label className="block text-[11px] font-bold uppercase tracking-wider text-[#140C07] mb-2">
-                          Preferred Time <span className="text-[#B88B58]">*</span>
+                        <label className="block text-[10px] font-bold uppercase tracking-wider text-[#140C07] mb-1.5">
+                          Time <span className="text-[#B88B58]">*</span>
                         </label>
                         <input
                           type="time"
@@ -202,79 +186,73 @@ export default function ReservationForm() {
                           required
                           value={formData.time}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-2 focus:ring-[#B88B58]/20 transition-all font-sans"
+                          className="w-full px-4 py-2.5 text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-1 focus:ring-[#B88B58] transition-all font-sans"
                         />
                       </div>
                     </div>
 
                     {/* Seating preference */}
                     <div>
-                      <label className="block text-[11px] font-bold uppercase tracking-wider text-[#140C07] mb-2">
-                        Seating Preference <span className="text-[#B88B58]">*</span>
+                      <label className="block text-[10px] font-bold uppercase tracking-wider text-[#140C07] mb-1.5">
+                        Preferred Seating Area
                       </label>
                       <select
                         name="seating"
                         value={formData.seating}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-2 focus:ring-[#B88B58]/20 transition-all font-sans"
+                        className="w-full px-4 py-2.5 text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-1 focus:ring-[#B88B58] transition-all font-sans"
                       >
-                        <option value="Main Coffee Lounge (Quiet & Plugs)">
-                          Main Coffee Lounge (Quiet Atmosphere &amp; Plugs)
-                        </option>
-                        <option value="Library Mezzanine (Window View)">
-                          Library Mezzanine (Reading Armchairs &amp; Natural Light)
-                        </option>
-                        <option value="Heated Garden Veranda">
-                          Heated Garden Veranda (Victorian Courtyard)
-                        </option>
-                        <option value="The Private Parlour Boardroom">
-                          The Private Parlour Boardroom (Enclosed &amp; AV Setup)
-                        </option>
+                        <option value="Main Coffee Lounge">Main Coffee Lounge</option>
+                        <option value="Library Mezzanine">Library Mezzanine</option>
+                        <option value="Heated Courtyard Terrace">Heated Courtyard Terrace</option>
+                        <option value="The Private Parlour">The Private Parlour</option>
                       </select>
                     </div>
 
-                    {/* Notes */}
+                    {/* Special notes (Clean, compact 1-line input) */}
                     <div>
-                      <label className="block text-[11px] font-bold uppercase tracking-wider text-[#140C07] mb-2">
-                        Dietary Requirements or Special Requests
+                      <label className="block text-[10px] font-bold uppercase tracking-wider text-[#140C07] mb-1.5">
+                        Special Requests <span className="text-[#8C7A6B] font-normal">(Optional)</span>
                       </label>
-                      <textarea
+                      <input
+                        type="text"
                         name="notes"
-                        rows="2"
-                        placeholder="e.g. Gluten-free pastries requested, bringing well-behaved dog, anniversary celebration..."
+                        placeholder="e.g. Bringing polite dog, window seat preferred"
                         value={formData.notes}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-2 focus:ring-[#B88B58]/20 transition-all font-sans"
-                      ></textarea>
+                        className="w-full px-4 py-2.5 text-sm rounded-xl border border-[#E8DFD5] bg-[#FAF7F2] focus:bg-white focus:outline-none focus:border-[#140C07] focus:ring-1 focus:ring-[#B88B58] transition-all font-sans"
+                      />
                     </div>
 
-                    {/* Submit */}
-                    <button
-                      type="submit"
-                      className="shimmer-btn w-full py-4 rounded-xl bg-[#140C07] hover:bg-[#2A1C14] text-[#FAF7F2] text-xs uppercase tracking-[0.2em] font-bold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer border border-[#B88B58]/40 hover:-translate-y-0.5"
-                    >
-                      <Send className="w-3.5 h-3.5 text-[#B88B58]" />
-                      <span>Confirm Table Reservation</span>
-                    </button>
+                    {/* Submit Button */}
+                    <div className="pt-2">
+                      <button
+                        type="submit"
+                        className="shimmer-btn w-full py-3.5 rounded-xl bg-[#140C07] hover:bg-[#B88B58] text-[#FAF7F2] text-xs uppercase tracking-widest font-bold shadow-md hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+                      >
+                        <Send className="w-3.5 h-3.5" />
+                        <span>Confirm Table Reservation</span>
+                      </button>
+                    </div>
 
-                    <p className="text-[11px] text-center text-[#8A7C72]">
-                      🔒 Guest privacy guaranteed. Your booking is held with our Mount Street maître d'.
+                    <p className="text-[10px] text-center text-[#8A7C72] font-light">
+                      Free cancellation. No deposit required.
                     </p>
                   </form>
                 </>
               ) : (
-                /* Elegant Luxury In-Page Confirmation Card */
-                <div className="py-6 text-center space-y-6 animate-entrance">
-                  <div className="w-16 h-16 rounded-full bg-[#B88B58]/15 border border-[#B88B58] text-[#B88B58] flex items-center justify-center mx-auto">
-                    <CheckCircle2 className="w-8 h-8" />
+                /* Confirmation Card */
+                <div className="py-6 text-center space-y-5 animate-entrance">
+                  <div className="w-14 h-14 rounded-full bg-[#B88B58]/15 border border-[#B88B58] text-[#B88B58] flex items-center justify-center mx-auto">
+                    <CheckCircle2 className="w-7 h-7" />
                   </div>
 
                   <div>
                     <span className="text-[11px] font-mono tracking-widest text-[#B88B58] uppercase block mb-1">
-                      Booking Reference: {bookingRef}
+                      Booking Ref: {bookingRef}
                     </span>
-                    <h3 className="font-serif font-bold text-2xl sm:text-3xl text-[#140C07] mb-2">
-                      Your Table is Reserved
+                    <h3 className="font-serif font-bold text-2xl text-[#140C07] mb-2">
+                      Table Reserved Successfully
                     </h3>
                     {(() => {
                       const formattedBookingDate = new Date(formData.date + 'T12:00:00Z').toLocaleDateString('en-GB', {
@@ -284,38 +262,34 @@ export default function ReservationForm() {
                         year: 'numeric',
                       });
                       return (
-                        <p className="font-sans text-sm text-[#6E6259] max-w-md mx-auto leading-relaxed">
-                          Thank you, <span className="font-semibold text-[#140C07]">{formData.name}</span>. We have secured your table for <span className="font-semibold text-[#140C07]">{formData.guests}</span> on <span className="font-semibold text-[#140C07]">{formattedBookingDate}</span> at <span className="font-semibold text-[#140C07]">{formData.time} London Time</span>.
+                        <p className="font-sans text-xs sm:text-sm text-[#6E6259] max-w-sm mx-auto leading-relaxed font-light">
+                          Thank you, <span className="font-semibold text-[#140C07]">{formData.name}</span>. We look forward to welcoming you for <span className="font-semibold text-[#140C07]">{formData.guests}</span> on <span className="font-semibold text-[#140C07]">{formattedBookingDate}</span> at <span className="font-semibold text-[#140C07]">{formData.time} London Time</span>.
                         </p>
                       );
                     })()}
                   </div>
 
-                  <div className="bg-[#FAF7F2] p-5 rounded-2xl border border-[#E8DFD5] text-left text-xs space-y-2.5 max-w-md mx-auto">
-                    <div className="flex justify-between border-b border-[#E8DFD5] pb-2">
-                      <span className="text-[#8C7A6B]">Seating Area:</span>
+                  <div className="bg-[#FAF7F2] p-4 rounded-xl border border-[#E8DFD5] text-left text-xs space-y-2 max-w-sm mx-auto">
+                    <div className="flex justify-between">
+                      <span className="text-[#8C7A6B]">Seating:</span>
                       <span className="font-semibold text-[#140C07]">{formData.seating}</span>
                     </div>
-                    <div className="flex justify-between border-b border-[#E8DFD5] pb-2">
-                      <span className="text-[#8C7A6B]">Arrival Window:</span>
-                      <span className="font-semibold text-[#140C07]">15-minute courtesy hold</span>
-                    </div>
-                    <div className="flex justify-between border-b border-[#E8DFD5] pb-2">
-                      <span className="text-[#8C7A6B]">Location:</span>
-                      <span className="font-semibold text-[#140C07]">No. 42 Mount Street, Mayfair, London W1K 2RN</span>
+                    <div className="flex justify-between">
+                      <span className="text-[#8C7A6B]">Arrival Hold:</span>
+                      <span className="font-semibold text-[#140C07]">15 minutes courtesy hold</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-[#8C7A6B]">Nearest Tube:</span>
-                      <span className="font-semibold text-[#140C07]">Bond Street (Elizabeth &amp; Jubilee Lines)</span>
+                      <span className="text-[#8C7A6B]">Location:</span>
+                      <span className="font-semibold text-[#140C07]">42 Mount St, Mayfair W1K</span>
                     </div>
                   </div>
 
                   <button
                     onClick={handleReset}
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-[#140C07]/30 hover:border-[#140C07] text-xs font-semibold uppercase tracking-wider text-[#140C07] hover:bg-[#140C07] hover:text-[#FAF7F2] transition-all cursor-pointer shadow-xs"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-[#140C07]/20 hover:border-[#140C07] text-xs font-semibold uppercase tracking-wider text-[#140C07] hover:bg-[#140C07] hover:text-[#FAF7F2] transition-all cursor-pointer"
                   >
-                    <RotateCcw className="w-3.5 h-3.5" />
-                    <span>Make Another Reservation</span>
+                    <RotateCcw className="w-3 h-3" />
+                    <span>Make Another Booking</span>
                   </button>
                 </div>
               )}
