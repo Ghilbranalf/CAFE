@@ -138,10 +138,10 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 lg:h-24 flex items-center justify-between">
           
           {/* Bespoke Heritage Brand Crest & Wordmark */}
-          <a href="#hero" className="flex items-center gap-2.5 sm:gap-3.5 group shrink-0">
+          <a href="#hero" className="flex items-center gap-2 sm:gap-3.5 group shrink-0">
             {/* Custom Monogram Seal */}
-            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-[#B88B58] bg-[#140C07] text-[#B88B58] flex items-center justify-center shrink-0 shadow-sm relative group-hover:border-[#FAF7F2] transition-colors">
-              <svg viewBox="0 0 100 100" className="w-7 h-7 sm:w-8 sm:h-8 fill-current">
+            <div className="w-9 h-9 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full border border-[#B88B58] bg-[#140C07] text-[#B88B58] flex items-center justify-center shrink-0 shadow-sm relative group-hover:border-[#FAF7F2] transition-colors">
+              <svg viewBox="0 0 100 100" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 fill-current">
                 {/* Decorative outer ring */}
                 <circle cx="50" cy="50" r="46" fill="none" stroke="#B88B58" strokeWidth="1.5" strokeDasharray="2 3" />
                 <circle cx="50" cy="50" r="41" fill="none" stroke="#B88B58" strokeWidth="1" />
@@ -163,7 +163,7 @@ export default function Navbar() {
 
             {/* Typography */}
             <div className="flex flex-col">
-              <span className="font-serif font-bold text-sm sm:text-lg lg:text-xl tracking-[0.1em] sm:tracking-[0.14em] text-[#140C07] uppercase leading-tight group-hover:text-[#B88B58] transition-colors whitespace-nowrap">
+              <span className="font-serif font-bold text-[13px] xs:text-sm sm:text-lg lg:text-xl tracking-[0.06em] xs:tracking-[0.1em] sm:tracking-[0.14em] text-[#140C07] uppercase leading-tight group-hover:text-[#B88B58] transition-colors whitespace-nowrap">
                 The Heritage {"&"} Roast
               </span>
             </div>
@@ -187,13 +187,13 @@ export default function Navbar() {
             <MagneticButton
               href="#reservation"
               strength={0.22}
-              className="shimmer-btn hidden md:inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-[#140C07] hover:bg-[#2A1C14] text-[#FAF7F2] text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] border border-[#B88B58]/50 shadow-xs hover:shadow-md transition-all hover:border-[#B88B58] group cursor-pointer rounded-xl"
+              className="shimmer-btn hidden lg:inline-flex items-center gap-2 px-6 py-3 bg-[#140C07] hover:bg-[#2A1C14] text-[#FAF7F2] text-[11px] font-bold uppercase tracking-[0.2em] border border-[#B88B58]/50 shadow-xs hover:shadow-md transition-all hover:border-[#B88B58] group cursor-pointer rounded-xl"
             >
               <span>Reserve a Table</span>
               <span className="text-[#B88B58] group-hover:translate-x-1 transition-transform duration-300">→</span>
             </MagneticButton>
 
-            {/* Mobile Hamburger Toggle */}
+            {/* Mobile / Tablet Hamburger Toggle */}
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden p-2.5 rounded-xl border border-[#E8DFD5] text-[#140C07] hover:bg-[#F3EDE4] transition-colors cursor-pointer"
