@@ -120,54 +120,31 @@ export default function Hero() {
               </MagneticButton>
               
               <MagneticButton
-                href="#reservation"
+                href="#location"
                 strength={0.18}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3 px-2 text-[#140C07] hover:text-[#B88B58] text-[11px] font-semibold uppercase tracking-[0.22em] border-b border-[#140C07]/30 hover:border-[#B88B58] transition-all group cursor-pointer"
               >
-                <span>Reserve a Table</span>
+                <span>Location &amp; Opening Hours</span>
                 <span className="text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300">↗</span>
               </MagneticButton>
             </div>
 
-            {/* Heritage Tasting Ledger Notes */}
+            {/* Clean, Refined Brand Highlights */}
             <div 
-              className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-[#E8DFD5] w-full max-w-2xl animate-entrance"
+              className="flex flex-wrap items-center gap-6 sm:gap-8 pt-6 border-t border-[#E8DFD5] w-full max-w-xl animate-entrance"
               style={{ animationDelay: '700ms' }}
             >
-              <div className="group cursor-default">
-                <span className="font-sans text-[10px] uppercase font-bold text-[#B88B58] tracking-[0.25em] block mb-1.5 group-hover:tracking-[0.3em] transition-all duration-300">
-                  I. Provenance
-                </span>
-                <h4 className="font-serif font-bold text-sm text-[#140C07] mb-1 group-hover:text-[#B88B58] transition-colors">
-                  Single-Origin Lots
-                </h4>
-                <p className="font-sans text-xs text-[#7A6D63] leading-relaxed font-light">
-                  Directly traded micro-harvests from Yirgacheffe, Huila &amp; Nyeri.
-                </p>
+              <div className="flex items-center gap-2.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58]" />
+                <span className="font-serif font-semibold text-sm text-[#140C07]">SCA 87+ Single-Origin</span>
               </div>
-
-              <div className="sm:border-l sm:border-[#E8DFD5] sm:pl-6 group cursor-default">
-                <span className="font-sans text-[10px] uppercase font-bold text-[#B88B58] tracking-[0.25em] block mb-1.5 group-hover:tracking-[0.3em] transition-all duration-300">
-                  II. Viennoiserie
-                </span>
-                <h4 className="font-serif font-bold text-sm text-[#140C07] mb-1 group-hover:text-[#B88B58] transition-colors">
-                  72-Hr Lamination
-                </h4>
-                <p className="font-sans text-xs text-[#7A6D63] leading-relaxed font-light">
-                  Handmade daily with French Charentes-Poitou AOP cultured butter.
-                </p>
+              <div className="flex items-center gap-2.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58]" />
+                <span className="font-serif font-semibold text-sm text-[#140C07]">72-Hr AOP Viennoiserie</span>
               </div>
-
-              <div className="sm:border-l sm:border-[#E8DFD5] sm:pl-6 group cursor-default">
-                <span className="font-sans text-[10px] uppercase font-bold text-[#B88B58] tracking-[0.25em] block mb-1.5 group-hover:tracking-[0.3em] transition-all duration-300">
-                  III. The Parlour
-                </span>
-                <h4 className="font-serif font-bold text-sm text-[#140C07] mb-1 group-hover:text-[#B88B58] transition-colors">
-                  Mayfair Sanctuary
-                </h4>
-                <p className="font-sans text-xs text-[#7A6D63] leading-relaxed font-light">
-                  Quiet Georgian library, heated jasmine courtyard &amp; board parlour.
-                </p>
+              <div className="flex items-center gap-2.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58]" />
+                <span className="font-serif font-semibold text-sm text-[#140C07]">Mayfair Georgian Parlour</span>
               </div>
             </div>
 

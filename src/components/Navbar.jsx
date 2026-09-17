@@ -94,13 +94,13 @@ export default function Navbar() {
           {/* Concierge & Walk-in note */}
           <div className="flex items-center gap-6 text-[10px] text-[#B88B58]">
             <span className="hidden md:inline tracking-[0.22em] text-[#C4B3A3]">
-              Walk-Ins &amp; Reservations Welcomed
+              Walk-Ins Welcomed Daily
             </span>
             <a
-              href="#reservation"
+              href="#location"
               className="text-[#FAF7F2] hover:text-[#B88B58] transition-colors flex items-center gap-1 font-semibold"
             >
-              <span>Concierge Desk • Mayfair</span>
+              <span>Visit Us • Mayfair W1</span>
               <ArrowUpRight className="w-3 h-3 text-[#B88B58]" />
             </a>
           </div>
@@ -147,9 +147,6 @@ export default function Navbar() {
               <span className="font-serif font-bold text-lg sm:text-xl tracking-[0.14em] text-[#140C07] uppercase leading-tight group-hover:text-[#B88B58] transition-colors">
                 The Heritage {"&"} Roast
               </span>
-              <span className="font-sans text-[9px] sm:text-[10px] font-semibold tracking-[0.28em] text-[#B88B58] uppercase mt-0.5">
-                Mayfair Micro-Roastery • London
-              </span>
             </div>
           </a>
 
@@ -169,11 +166,11 @@ export default function Navbar() {
           {/* Bespoke Table Booking CTA (Sharp Editorial Style with Magnetic Pull) */}
           <div className="flex items-center gap-4">
             <MagneticButton
-              href="#reservation"
+              href="#location"
               strength={0.22}
               className="shimmer-btn hidden sm:inline-flex items-center gap-2 px-6 py-3 bg-[#140C07] hover:bg-[#2A1C14] text-[#FAF7F2] text-[11px] font-bold uppercase tracking-[0.22em] border border-[#B88B58]/50 shadow-xs hover:shadow-md transition-all hover:border-[#B88B58] group cursor-pointer rounded-xl"
             >
-              <span>Reserve a Table</span>
+              <span>Visit Mayfair</span>
               <span className="text-[#B88B58] group-hover:translate-x-1 transition-transform duration-300">→</span>
             </MagneticButton>
 
@@ -203,11 +200,11 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="#reservation"
+                href="#location"
                 onClick={() => setIsOpen(false)}
                 className="mt-3 py-3.5 px-6 rounded-xl bg-[#140C07] text-[#FAF7F2] text-xs uppercase tracking-[0.22em] font-bold border border-[#B88B58]/40 shadow-sm"
               >
-                Reserve a Table →
+                Visit Mayfair →
               </a>
             </div>
           </div>

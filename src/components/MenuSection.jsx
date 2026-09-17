@@ -93,7 +93,7 @@ export default function MenuSection() {
 
                   {/* Dine-In Experience CTA */}
                   <a
-                    href="#reservation"
+                    href="#location"
                     className="shimmer-btn w-full py-2.5 px-4 rounded-xl border border-[#E8DFD5] hover:border-[#140C07] bg-[#FAF7F2] hover:bg-[#140C07] text-[#140C07] hover:text-[#FAF7F2] text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 transition-all duration-300"
                   >
                     <Coffee className="w-3.5 h-3.5 text-[#B88B58]" />
@@ -146,13 +146,6 @@ export default function MenuSection() {
           </div>
         </Reveal>
 
-        {/* UK Regulatory & Allergen Notice */}
-        <div className="text-center max-w-2xl mx-auto mb-14 text-[11px] text-[#8C7A6B] font-sans leading-relaxed border-t border-[#E8DFD5] pt-6">
-          <p>
-            * All prices are quoted in British Sterling (£) and inclusive of 20% standard UK VAT. A discretionary 12.5% service charge is added to table service. In accordance with UK Food Information Regulations (Natasha&apos;s Law), please speak to our team regarding any food allergies or intolerances.
-          </p>
-        </div>
-
         {/* Bespoke Catering & Flights Banner */}
         <Reveal effect="zoom" delay={150}>
           <div className="bg-[#140C07] text-[#FAF7F2] rounded-3xl p-8 sm:p-12 border border-[#B88B58]/30 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl">
@@ -170,10 +163,10 @@ export default function MenuSection() {
             </div>
 
             <a
-              href="#reservation"
+              href="#location"
               className="shimmer-btn shrink-0 inline-flex items-center gap-2 px-8 py-4 bg-[#B88B58] hover:bg-[#9E7445] text-white text-xs uppercase tracking-widest font-bold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              <span>Book Tasting Table</span>
+              <span>Visit Mayfair Roastery</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>

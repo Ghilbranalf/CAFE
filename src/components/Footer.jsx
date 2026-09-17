@@ -69,10 +69,10 @@ export default function Footer() {
               Hospitality
             </h4>
             <ul className="space-y-2.5 text-xs text-[#A8988C] font-sans">
-              <li><a href="#reservation" className="hover:text-[#B88B58] transition-colors">Table Bookings</a></li>
+              <li><a href="#location" className="hover:text-[#B88B58] transition-colors">Walk-In Hospitality</a></li>
               <li>
                 <a
-                  href="#reservation"
+                  href="#parlour"
                   className="hover:text-[#B88B58] transition-colors"
                 >
                   Private Parlour Hire

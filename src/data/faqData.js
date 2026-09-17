@@ -21,7 +21,7 @@ export const FAQS = [
     id: 4,
     question: 'How may I reserve The Private Parlour for executive meetings or private dining?',
     answer:
-      'The Parlour accommodates up to 18 seated guests or 30 for standing canapé receptions. You may submit an enquiry via our reservation ledger or contact our concierge desk directly at +44 20 7946 0912. Full AV equipment, tailored tasting flights, and bespoke breakfast or afternoon tea menus can be arranged.',
+      'The Parlour accommodates up to 18 seated guests or 30 for standing canapé receptions. You may contact our concierge desk directly at +44 20 7946 0912 or visit our Mount Street team. Full AV equipment, tailored tasting flights, and bespoke breakfast or afternoon tea menus can be arranged.',
   },
   {
     id: 5,
