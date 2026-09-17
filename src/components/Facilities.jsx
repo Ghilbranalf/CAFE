@@ -19,15 +19,15 @@ export default function Facilities() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <Reveal effect="up" className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#B88B58] block mb-2.5">
+        <Reveal effect="up" className="text-center max-w-2xl mx-auto mb-14">
+          <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#B88B58] block mb-2">
             The Living Space
           </span>
-          <h2 className="font-serif font-bold text-3xl sm:text-4xl text-[#FAF7F2] mb-4">
-            Designed for Focus, Stillness &amp; Gathering
+          <h2 className="font-serif font-bold text-3xl sm:text-4xl text-[#FAF7F2] mb-3">
+            Designed for Focus &amp; Stillness
           </h2>
-          <p className="font-sans text-base text-[#D4C7BC] font-light leading-relaxed">
-            A civilized marriage of historical Georgian architecture and state-of-the-art modern amenities tailored for remote creatives and discerning patrons.
+          <p className="font-sans text-sm sm:text-base text-[#D4C7BC] font-light leading-relaxed">
+            Georgian architecture meets modern comfort — curated for quiet focus, reading, and civilized gathering.
           </p>
         </Reveal>
 

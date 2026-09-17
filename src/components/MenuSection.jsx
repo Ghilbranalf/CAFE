@@ -1,54 +1,48 @@
-import React, { useState } from 'react';
-import { MENU_CATEGORIES, MENU_ITEMS } from '../data/menuData';
-import { Sparkles, Coffee } from 'lucide-react';
+import React from 'react';
+import { TOP_SIX_MENU_ITEMS } from '../data/menuData';
+import { Sparkles, Coffee, FileText, ExternalLink, Download, ArrowRight } from 'lucide-react';
 import Reveal from './Reveal';
 import SpotlightCard from './SpotlightCard';
 
 export default function MenuSection() {
-  const [activeCategory, setActiveCategory] = useState('all');
-
-  const filteredItems =
-    activeCategory === 'all'
-      ? MENU_ITEMS
-      : MENU_ITEMS.filter((item) => item.category === activeCategory);
-
   return (
     <section id="menu" className="py-20 md:py-28 bg-[#FAF7F2] text-[#140C07] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header with Smooth Entrance */}
+        {/* Section Header */}
         <Reveal effect="up" className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#B88B58] block mb-2.5">
-            The Daily Service
-          </span>
-          <h2 className="font-serif font-bold text-3xl sm:text-4xl text-[#140C07] mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#B88B58]/10 border border-[#B88B58]/30 text-[#B88B58] text-[11px] font-bold uppercase tracking-[0.22em] mb-3">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>The Daily Service</span>
+          </div>
+          <h2 className="font-serif font-bold text-3xl sm:text-4xl lg:text-5xl text-[#140C07] mb-4">
             Curated Speciality Menu
           </h2>
-          <p className="font-sans text-base text-[#6E6259] font-light leading-relaxed">
+          <p className="font-sans text-base text-[#6E6259] font-light leading-relaxed max-w-2xl mx-auto">
             Every drink is crafted with pure mineral-balanced water, precisely dialed-in extraction profiles, and certified British &amp; European provenance.
           </p>
-        </Reveal>
 
-        {/* Category Filter Pills */}
-        <Reveal effect="fade" delay={100} className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 mb-14">
-          {MENU_CATEGORIES.map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => setActiveCategory(cat.id)}
-              className={`px-5 py-2.5 rounded-xl text-xs font-semibold tracking-wide uppercase transition-all duration-300 cursor-pointer ${
-                activeCategory === cat.id
-                  ? 'bg-[#140C07] text-[#FAF7F2] shadow-md border border-[#B88B58]/40 scale-105'
-                  : 'bg-white text-[#6E6259] hover:text-[#140C07] border border-[#E8DFD5] hover:border-[#140C07]/30'
-              }`}
+          {/* Quick PDF Access Bar */}
+          <div className="mt-6 flex items-center justify-center gap-3">
+            <span className="text-xs uppercase tracking-widest text-[#B88B58] font-semibold">
+              Top 6 Signature Selections
+            </span>
+            <span className="text-[#D4C7BC]">•</span>
+            <a
+              href="/menu.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest font-bold text-[#140C07] hover:text-[#B88B58] underline underline-offset-4 decoration-[#B88B58] transition-colors"
             >
-              {cat.label}
-            </button>
-          ))}
+              <span>View Full Menu (PDF)</span>
+              <ExternalLink className="w-3 h-3 text-[#B88B58]" />
+            </a>
+          </div>
         </Reveal>
 
-        {/* Menu Items Grid with Staggered Cascading Reveals */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {filteredItems.map((item, idx) => (
+        {/* Top Six Menu Grid (3x2) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-14">
+          {TOP_SIX_MENU_ITEMS.map((item, idx) => (
             <Reveal
               key={item.id}
               effect="up"
@@ -114,7 +108,7 @@ export default function MenuSection() {
                     </div>
                   </div>
 
-                  {/* Elegant In-Cafe Tasting Note / CTA */}
+                  {/* Dine-In Experience CTA */}
                   <a
                     href="#reservation"
                     className="shimmer-btn w-full py-2.5 px-4 rounded-xl border border-[#E8DFD5] hover:border-[#140C07] bg-[#FAF7F2] hover:bg-[#140C07] text-[#140C07] hover:text-[#FAF7F2] text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 transition-all duration-300"
@@ -128,10 +122,50 @@ export default function MenuSection() {
           ))}
         </div>
 
+        {/* Prominent "View All Menu (PDF)" Banner */}
+        <Reveal effect="up" delay={100} className="mb-14">
+          <div className="bg-gradient-to-r from-[#140C07] via-[#1E140D] to-[#140C07] rounded-2xl p-6 sm:p-8 border border-[#B88B58]/30 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 text-[#FAF7F2]">
+            <div className="flex items-center gap-4 text-left">
+              <div className="w-12 h-12 rounded-xl bg-[#B88B58]/15 border border-[#B88B58]/30 flex items-center justify-center shrink-0">
+                <FileText className="w-6 h-6 text-[#B88B58]" />
+              </div>
+              <div>
+                <h3 className="font-serif font-bold text-lg sm:text-xl text-white">
+                  Discover Our Complete Mayfair Menu
+                </h3>
+                <p className="font-sans text-xs sm:text-sm text-[#D4C7BC] font-light mt-0.5">
+                  Browse single-origin micro-lots, botanical cold brews, hand-laminated viennoiserie, and all-day kitchen offerings.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3 shrink-0 w-full sm:w-auto">
+              <a
+                href="/menu.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shimmer-btn w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#B88B58] hover:bg-[#A37845] text-white text-xs uppercase tracking-widest font-bold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group"
+              >
+                <span>View Full Menu (PDF)</span>
+                <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
+
+              <a
+                href="/menu.pdf"
+                download="The-Heritage-And-Roast-Mayfair-Menu.pdf"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-[#FAF7F2]/10 hover:bg-[#FAF7F2]/20 text-[#FAF7F2] border border-[#B88B58]/30 hover:border-[#B88B58] text-xs uppercase tracking-widest font-semibold rounded-xl transition-all duration-300"
+              >
+                <Download className="w-3.5 h-3.5 text-[#B88B58]" />
+                <span>Download</span>
+              </a>
+            </div>
+          </div>
+        </Reveal>
+
         {/* UK Regulatory & Allergen Notice */}
         <div className="text-center max-w-2xl mx-auto mb-14 text-[11px] text-[#8C7A6B] font-sans leading-relaxed border-t border-[#E8DFD5] pt-6">
           <p>
-            * All prices are quoted in British Sterling (£) and inclusive of 20% standard UK VAT. A discretionary 12.5% service charge is added to table service. In accordance with UK Food Information Regulations (Natasha's Law), please speak to our team regarding any food allergies or intolerances.
+            * All prices are quoted in British Sterling (£) and inclusive of 20% standard UK VAT. A discretionary 12.5% service charge is added to table service. In accordance with UK Food Information Regulations (Natasha&apos;s Law), please speak to our team regarding any food allergies or intolerances.
           </p>
         </div>
 
@@ -147,15 +181,16 @@ export default function MenuSection() {
                 Specific Dietary Requirements or Rare Micro-Lot Flights?
               </h3>
               <p className="font-sans text-sm text-[#D6C7BC] max-w-2xl leading-relaxed font-light">
-                We gladly provide certified organic British oat milk at zero supplement, Swiss Water Process decaffeinated roasts, and bespoke pour-over tasting flights guided by our senior head roaster.
+                We cater generously for gluten-free, vegan, and nut-intolerant patrons. Minor Figures organic British oat milk and decaffeinated Swiss Water swiss-roast are served at zero surcharge.
               </p>
             </div>
 
             <a
               href="#reservation"
-              className="shimmer-btn shrink-0 px-8 py-4 rounded-xl bg-[#B88B58] hover:bg-[#9E7445] text-white text-xs uppercase tracking-widest font-bold shadow-lg hover:shadow-2xl transition-all duration-300 inline-flex items-center justify-center"
+              className="shimmer-btn shrink-0 inline-flex items-center gap-2 px-8 py-4 bg-[#B88B58] hover:bg-[#9E7445] text-white text-xs uppercase tracking-widest font-bold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              Reserve a Tasting Session
+              <span>Book Tasting Table</span>
+              <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>
         </Reveal>
