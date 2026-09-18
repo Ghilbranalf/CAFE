@@ -169,8 +169,8 @@ export default function Navbar() {
             </div>
           </a>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-8">
+          {/* Desktop Navigation Links (Large Desktop xl+ Only) */}
+          <nav className="hidden xl:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -184,8 +184,8 @@ export default function Navbar() {
 
           {/* Bespoke Table Booking CTA & Hamburger */}
           <div className="flex items-center gap-3 sm:gap-4 shrink-0">
-            {/* Desktop Only Reservation Button */}
-            <div className="hidden lg:block">
+            {/* Desktop Only Reservation Button (xl+ only) */}
+            <div className="hidden xl:block">
               <MagneticButton
                 href="#reservation"
                 strength={0.22}
@@ -196,10 +196,10 @@ export default function Navbar() {
               </MagneticButton>
             </div>
 
-            {/* Mobile / Tablet Hamburger Toggle */}
+            {/* Mobile / Tablet (Mini & Plus) Hamburger Toggle */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2.5 rounded-xl border border-[#E8DFD5] text-[#140C07] hover:bg-[#F3EDE4] transition-colors cursor-pointer"
+              className="xl:hidden p-2.5 rounded-xl border border-[#E8DFD5] text-[#140C07] hover:bg-[#F3EDE4] transition-colors cursor-pointer"
               aria-label="Toggle Menu"
             >
               {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -207,17 +207,17 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Navigation Drawer with Overlay */}
+        {/* Mobile & Tablet Navigation Drawer with Overlay */}
         {isOpen && (
           <>
             {/* Backdrop overlay for touch click outside */}
             <div
-              className="fixed inset-0 top-[110px] sm:top-[128px] bg-black/40 backdrop-blur-xs z-40 lg:hidden"
+              className="fixed inset-0 top-[110px] sm:top-[128px] bg-black/40 backdrop-blur-xs z-40 xl:hidden"
               onClick={() => setIsOpen(false)}
               aria-hidden="true"
             />
             
-            <div className="lg:hidden relative z-50 bg-[#FAF7F2] border-b border-[#E8DFD5] px-6 py-8 shadow-2xl max-h-[calc(100vh-120px)] overflow-y-auto animate-in fade-in duration-200">
+            <div className="xl:hidden relative z-50 bg-[#FAF7F2] border-b border-[#E8DFD5] px-6 py-8 shadow-2xl max-h-[calc(100vh-120px)] overflow-y-auto animate-in fade-in duration-200">
               <div className="max-w-md mx-auto flex flex-col gap-4 text-center">
                 {navLinks.map((link) => (
                   <a
