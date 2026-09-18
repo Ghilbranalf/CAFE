@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Play, Pause, RotateCcw, Volume2, VolumeX } from 'lucide-react';
+import { Play, Pause, RotateCcw } from 'lucide-react';
 
 /**
  * LatteArtPouring Component
@@ -9,7 +9,6 @@ import { Play, Pause, RotateCcw, Volume2, VolumeX } from 'lucide-react';
 export default function LatteArtPouring({ className = '' }) {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(true);
-  const [isMuted, setIsMuted] = useState(true);
   const [progress, setProgress] = useState(0);
 
   const handleTogglePlay = () => {
@@ -30,12 +29,6 @@ export default function LatteArtPouring({ className = '' }) {
     setIsPlaying(true);
   };
 
-  const handleToggleMute = () => {
-    if (!videoRef.current) return;
-    videoRef.current.muted = !isMuted;
-    setIsMuted(!isMuted);
-  };
-
   const handleTimeUpdate = () => {
     if (videoRef.current && videoRef.current.duration) {
       setProgress((videoRef.current.currentTime / videoRef.current.duration) * 100);
@@ -45,14 +38,14 @@ export default function LatteArtPouring({ className = '' }) {
   return (
     <div className={`relative w-full aspect-[4/3] bg-[#140C07] rounded-2xl overflow-hidden select-none group shadow-[0_20px_50px_rgba(20,12,7,0.25)] ${className}`}>
       
-      {/* 1. Cinematic Video (Full Bleed, Crystal Clear) */}
+      {/* 1. Cinematic Video (Full Bleed, Crystal Clear, Always Muted) */}
       <video
         ref={videoRef}
         src="/latte-art-pour.mp4"
         poster="/pour_stage_70.jpg"
         autoPlay
         loop
-        muted={isMuted}
+        muted
         playsInline
         onTimeUpdate={handleTimeUpdate}
         className="w-full h-full object-cover object-center"
@@ -62,19 +55,7 @@ export default function LatteArtPouring({ className = '' }) {
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#140C07]/60 via-transparent to-black/20" />
       <div className="absolute inset-0 pointer-events-none ring-1 ring-inset ring-white/15 rounded-2xl" />
 
-      {/* 3. Top-Right Discreet Audio & Status Tag */}
-      <div className="absolute top-3.5 right-3.5 z-20 flex items-center gap-2">
-        <button
-          onClick={handleToggleMute}
-          className="p-2.5 sm:p-2 rounded-full bg-[#140C07]/80 hover:bg-[#140C07] backdrop-blur-md text-[#FAF7F2] border border-white/20 transition-all opacity-90 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer shadow-md"
-          title={isMuted ? 'Unmute Audio' : 'Mute Audio'}
-          aria-label={isMuted ? 'Unmute Audio' : 'Mute Audio'}
-        >
-          {isMuted ? <VolumeX className="w-4 h-4 sm:w-3.5 sm:h-3.5" /> : <Volume2 className="w-4 h-4 sm:w-3.5 sm:h-3.5" />}
-        </button>
-      </div>
-
-      {/* 4. Bottom Sleek Controls Bar */}
+      {/* 3. Bottom Sleek Controls Bar */}
       <div className="absolute bottom-0 inset-x-0 z-20 px-3.5 sm:px-4 py-2.5 sm:py-3 bg-gradient-to-t from-[#140C07]/90 via-[#140C07]/60 to-transparent flex items-center justify-between opacity-95 sm:opacity-90 sm:group-hover:opacity-100 transition-opacity">
         
         {/* Play / Pause & Replay */}
