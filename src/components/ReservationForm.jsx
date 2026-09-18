@@ -65,17 +65,14 @@ export default function ReservationForm() {
               <div className="flex items-center gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58] shrink-0" />
                 <span className="font-serif text-xs sm:text-sm text-white font-semibold">Zero Deposit Required</span>
-                <span className="text-[11px] sm:text-xs text-[#A8988C] font-light">• Complimentary bookings</span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58] shrink-0" />
                 <span className="font-serif text-xs sm:text-sm text-white font-semibold">15-Minute Courtesy Hold</span>
-                <span className="text-[11px] sm:text-xs text-[#A8988C] font-light">• Preserved for your arrival</span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58] shrink-0" />
                 <span className="font-serif text-xs sm:text-sm text-white font-semibold">Instant Digital Voucher</span>
-                <span className="text-[11px] sm:text-xs text-[#A8988C] font-light">• Immediate reference ID</span>
               </div>
             </div>
 
