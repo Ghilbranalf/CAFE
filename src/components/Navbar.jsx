@@ -85,11 +85,11 @@ export default function Navbar() {
 
   const navLinks = [
     { label: 'The Craft', href: '#craft' },
-    { label: 'Curated Menu', href: '#menu' },
+    { label: 'Menu', href: '#menu' },
     { label: 'The Parlour', href: '#parlour' },
     { label: 'Atmosphere', href: '#gallery' },
-    { label: 'Guest Journal', href: '#reviews' },
-    { label: 'Mayfair Location', href: '#location' },
+    { label: 'Journal', href: '#reviews' },
+    { label: 'Location', href: '#location' },
   ];
 
   return (
@@ -135,7 +135,7 @@ export default function Navbar() {
             : 'bg-[#FAF7F2] border-b border-[#E8DFD5]/80'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 lg:h-24 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 lg:h-24 flex items-center justify-between gap-6 xl:gap-8">
           
           {/* Bespoke Heritage Brand Crest & Wordmark */}
           <a href="#hero" className="flex items-center gap-2 sm:gap-3.5 group shrink-0">
@@ -163,19 +163,19 @@ export default function Navbar() {
 
             {/* Typography */}
             <div className="flex flex-col">
-              <span className="font-serif font-bold text-[13px] xs:text-sm sm:text-lg lg:text-xl tracking-[0.06em] xs:tracking-[0.1em] sm:tracking-[0.14em] text-[#140C07] uppercase leading-tight group-hover:text-[#B88B58] transition-colors whitespace-nowrap">
+              <span className="font-serif font-bold text-[13px] xs:text-sm sm:text-base xl:text-lg 2xl:text-xl tracking-[0.06em] xs:tracking-[0.08em] sm:tracking-[0.12em] text-[#140C07] uppercase leading-tight group-hover:text-[#B88B58] transition-colors whitespace-nowrap">
                 The Heritage {"&"} Roast
               </span>
             </div>
           </a>
 
           {/* Desktop Navigation Links (Large Desktop xl+ Only) */}
-          <nav className="hidden xl:flex items-center gap-8">
+          <nav className="hidden xl:flex items-center gap-5 xl:gap-6 2xl:gap-8 shrink-0">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#6E6259] hover:text-[#140C07] transition-colors relative py-1 after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-full after:h-[1px] after:bg-[#B88B58] after:transition-all duration-300"
+                className="text-[11px] 2xl:text-xs font-semibold uppercase tracking-[0.16em] 2xl:tracking-[0.2em] text-[#6E6259] hover:text-[#140C07] transition-colors relative py-1 whitespace-nowrap after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-full after:h-[1px] after:bg-[#B88B58] after:transition-all duration-300"
               >
                 {link.label}
               </a>
@@ -189,7 +189,7 @@ export default function Navbar() {
               <MagneticButton
                 href="#reservation"
                 strength={0.22}
-                className="shimmer-btn inline-flex items-center gap-2 px-6 py-3 bg-[#140C07] hover:bg-[#2A1C14] text-[#FAF7F2] text-[11px] font-bold uppercase tracking-[0.2em] border border-[#B88B58]/50 shadow-xs hover:shadow-md transition-all hover:border-[#B88B58] group cursor-pointer rounded-xl"
+                className="shimmer-btn inline-flex items-center gap-2 px-5 py-2.5 2xl:px-6 2xl:py-3 bg-[#140C07] hover:bg-[#2A1C14] text-[#FAF7F2] text-[10px] 2xl:text-[11px] font-bold uppercase tracking-[0.18em] 2xl:tracking-[0.2em] border border-[#B88B58]/50 shadow-xs hover:shadow-md transition-all hover:border-[#B88B58] group cursor-pointer rounded-xl whitespace-nowrap"
               >
                 <span>Reserve a Table</span>
                 <span className="text-[#B88B58] group-hover:translate-x-1 transition-transform duration-300">→</span>
