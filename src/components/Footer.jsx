@@ -1,5 +1,5 @@
 import React from 'react';
-import { Coffee, Heart } from 'lucide-react';
+import { Coffee, Heart, Sparkles } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -102,8 +102,22 @@ export default function Footer() {
               <p>Sunday Brunch: 08:00 – 22:30 GMT</p>
             </div>
 
-            <div className="bg-white/5 border border-white/10 rounded-xl p-3 text-xs text-[#D6C7BC] font-serif">
-              <strong>100% SCA Speciality Grade</strong> • Minor Figures Organic Oat Milk Complimentary
+            {/* Bespoke Quality Guarantee */}
+            <div className="mt-5 p-3.5 rounded-xl bg-[#1B110A] border border-[#B88B58]/30 shadow-xs">
+              <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-[#B88B58] mb-2">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>The Mayfair Standard</span>
+              </div>
+              <div className="space-y-1.5 text-xs text-[#C4B5A8] font-sans">
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58] shrink-0" />
+                  <span className="text-[#FAF7F2] font-medium">100% SCA Speciality Grade</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58] shrink-0" />
+                  <span>Complimentary Minor Figures Oat</span>
+                </div>
+              </div>
             </div>
           </div>
 
