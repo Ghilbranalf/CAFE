@@ -87,10 +87,10 @@ export default function Hero() {
             {/* Poetic & Authoritative Luxury Headline */}
             <div className="overflow-hidden mb-5 sm:mb-7">
               <h1 
-                className="font-serif text-3xl sm:text-5xl lg:text-[64px] text-[#140C07] leading-[1.12] sm:leading-[1.07] tracking-tight font-normal animate-entrance"
+                className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[58px] 2xl:text-[64px] text-[#140C07] leading-[1.12] sm:leading-[1.08] tracking-tight font-normal animate-entrance"
                 style={{ animationDelay: '250ms' }}
               >
-                A civilised haven for <br className="hidden sm:inline" />
+                A civilised haven for <br className="hidden md:inline" />
                 <span className="font-cormorant italic font-normal text-[#B88B58]">
                   the art of the pour.
                 </span>
@@ -196,12 +196,12 @@ export default function Hero() {
               </div>
 
               {/* Minimalist Editorial Controls & View Switcher (Under the Frame) */}
-              <div className="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 px-1 text-[11px] font-sans">
+              <div className="mt-4 flex items-center justify-center">
                 {/* Tabs */}
-                <div className="flex items-center gap-1.5 bg-[#FAF7F2] p-1 sm:p-1.5 rounded-xl border border-[#E8DFD5] shadow-xs w-full sm:w-auto justify-center">
+                <div className="inline-flex items-center gap-1.5 bg-[#FAF7F2] p-1.5 rounded-xl border border-[#E8DFD5] shadow-xs">
                   <button
                     onClick={() => setViewMode('latte-art')}
-                    className={`flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-lg text-[11px] sm:text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
+                    className={`inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
                       viewMode === 'latte-art'
                         ? 'bg-[#140C07] text-[#FAF7F2] shadow-xs'
                         : 'text-[#7A6D63] hover:text-[#140C07]'
@@ -213,7 +213,7 @@ export default function Hero() {
 
                   <button
                     onClick={() => setViewMode('interior')}
-                    className={`flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-lg text-[11px] sm:text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
+                    className={`inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
                       viewMode === 'interior'
                         ? 'bg-[#140C07] text-[#FAF7F2] shadow-xs'
                         : 'text-[#7A6D63] hover:text-[#140C07]'
@@ -222,12 +222,6 @@ export default function Hero() {
                     <Eye className="w-3.5 h-3.5 text-[#B88B58]" />
                     <span>Cafe Interior</span>
                   </button>
-                </div>
-
-                {/* Provenance Tag */}
-                <div className="flex items-center gap-1.5 text-[#8C7A6B] text-[10px] font-mono tracking-widest uppercase">
-                  <Sparkles className="w-3 h-3 text-[#B88B58]" />
-                  <span>Mayfair W1K • Est. 2021</span>
                 </div>
               </div>
 
