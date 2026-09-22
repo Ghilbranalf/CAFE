@@ -107,27 +107,26 @@ export default function MenuSection() {
 
         {/* Prominent "View All Menu (PDF)" Banner */}
         <Reveal effect="up" delay={100} className="mb-10 sm:mb-14">
-          <div className="bg-gradient-to-r from-[#140C07] via-[#1E140D] to-[#140C07] rounded-2xl p-5 sm:p-8 border border-[#B88B58]/30 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 text-[#FAF7F2]">
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left">
-              <div className="w-12 h-12 rounded-xl bg-[#B88B58]/15 border border-[#B88B58]/30 flex items-center justify-center shrink-0">
-                <FileText className="w-6 h-6 text-[#B88B58]" />
+          <div className="bg-[#140C07] text-[#FAF7F2] rounded-3xl p-6 sm:p-10 lg:p-12 border border-[#B88B58]/30 flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 shadow-2xl">
+            <div className="text-center lg:text-left">
+              <div className="inline-flex lg:flex items-center gap-2 text-[#B88B58] text-xs font-semibold uppercase tracking-[0.2em] mb-2">
+                <FileText className="w-4 h-4" />
+                <span>The Mayfair Repertoire</span>
               </div>
-              <div>
-                <h3 className="font-serif font-bold text-lg sm:text-xl text-white">
-                  Discover Our Complete Mayfair Menu
-                </h3>
-                <p className="font-sans text-xs sm:text-sm text-[#D4C7BC] font-light mt-0.5">
-                  Browse single-origin micro-lots, botanical cold brews, hand-laminated viennoiserie, and all-day kitchen offerings.
-                </p>
-              </div>
+              <h3 className="font-serif font-bold text-xl sm:text-2xl lg:text-3xl mb-2.5 text-white">
+                Discover Our Complete Mayfair Menu
+              </h3>
+              <p className="font-sans text-xs sm:text-sm text-[#D6C7BC] max-w-2xl leading-relaxed font-light">
+                Browse single-origin micro-lots, botanical cold brews, hand-laminated viennoiserie, and all-day kitchen offerings.
+              </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0 w-full md:w-auto">
+            <div className="flex flex-col sm:flex-row items-center gap-3.5 shrink-0 w-full sm:w-auto justify-center">
               <a
                 href="/menu.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shimmer-btn w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 bg-[#B88B58] hover:bg-[#A37845] text-white text-xs uppercase tracking-widest font-bold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group"
+                className="shimmer-btn w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 sm:py-4 bg-[#B88B58] hover:bg-[#A37845] text-white text-xs uppercase tracking-widest font-bold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group"
               >
                 <FileText className="w-4 h-4 text-white" />
                 <span>View All Menu (PDF)</span>
@@ -137,7 +136,7 @@ export default function MenuSection() {
               <a
                 href="/menu.pdf"
                 download="The-Heritage-And-Roast-Mayfair-Menu.pdf"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-[#FAF7F2]/10 hover:bg-[#FAF7F2]/20 text-[#FAF7F2] border border-[#B88B58]/30 hover:border-[#B88B58] text-xs uppercase tracking-widest font-semibold rounded-xl transition-all duration-300"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:py-4 bg-[#FAF7F2]/10 hover:bg-[#FAF7F2]/20 text-[#FAF7F2] border border-[#B88B58]/30 hover:border-[#B88B58] text-xs uppercase tracking-widest font-semibold rounded-xl transition-all duration-300"
               >
                 <Download className="w-3.5 h-3.5 text-[#B88B58]" />
                 <span>Download</span>
