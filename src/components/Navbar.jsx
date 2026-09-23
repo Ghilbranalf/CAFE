@@ -1,61 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import MagneticButton from './MagneticButton';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [storeStatus, setStoreStatus] = useState({
-    isOpen: true,
-    text: 'Welcoming Guests Until 22:30 GMT',
-  });
 
   useEffect(() => {
-    const checkStatus = () => {
-      const now = new Date();
-      // Calculate authentic London time (GMT / BST)
-      const londonParts = new Intl.DateTimeFormat('en-GB', {
-        timeZone: 'Europe/London',
-        hour: 'numeric',
-        minute: 'numeric',
-        weekday: 'short',
-        hour12: false,
-      }).formatToParts(now);
-
-      const hourPart = parseInt(londonParts.find((p) => p.type === 'hour')?.value || '0', 10);
-      const minutePart = parseInt(londonParts.find((p) => p.type === 'minute')?.value || '0', 10);
-      const weekdayStr = londonParts.find((p) => p.type === 'weekday')?.value || '';
-
-      const currentHour = hourPart + minutePart / 60;
-      const isWeekend = weekdayStr === 'Fri' || weekdayStr === 'Sat';
-      const isSunday = weekdayStr === 'Sun';
-
-      let openHour = 7.5;
-      let closeHour = 22.5;
-
-      if (isWeekend) {
-        closeHour = 23.0; // Friday & Saturday open until 23:00 London Time
-      } else if (isSunday) {
-        openHour = 8.0; // Sunday opens at 08:00 London Time
-      }
-
-      if (currentHour >= openHour && currentHour < closeHour) {
-        const closeFormatted = isWeekend ? '23:00' : '22:30';
-        setStoreStatus({
-          isOpen: true,
-          text: `Welcoming Guests Until ${closeFormatted} London Time`,
-        });
-      } else {
-        const openFormatted = isSunday ? '08:00' : '07:30';
-        setStoreStatus({
-          isOpen: false,
-          text: `Coffee House Resting • Doors Open ${openFormatted} London Time`,
-        });
-      }
-    };
-
-    checkStatus();
-
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
@@ -95,48 +46,14 @@ export default function Navbar() {
   return (
     <>
       {/* Editorial Announcement Ribbon (Minimal & Classical) */}
-      <aside className="bg-[#140C07] text-[#D8C7B8] text-[10px] sm:text-[11px] py-2 sm:py-2.5 border-b border-[#B88B58]/20 tracking-[0.14em] sm:tracking-[0.18em] uppercase select-none font-sans">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Mobile & iPad (Tablet) View: Single Pristine Line Only */}
-          <div className="xl:hidden flex items-center justify-center text-center">
-            <a
-              href="#location"
-              className="text-[#B88B58] hover:text-[#FAF7F2] font-semibold tracking-[0.18em] sm:tracking-[0.22em] transition-colors whitespace-nowrap"
-            >
-              No. 42 Mount Street, Mayfair
-            </a>
-          </div>
-
-          {/* Desktop View (xl+): Full Editorial Status in 1 Single Unbroken Line */}
-          <div className="hidden xl:flex items-center justify-between gap-6 w-full whitespace-nowrap">
-            {/* Location & Real-Time London Status */}
-            <div className="flex items-center gap-3">
-              <span className="text-[#B88B58] font-semibold tracking-[0.16em]">
-                No. 42 Mount Street, Mayfair
-              </span>
-              <span className="text-[#B88B58]/40">|</span>
-              <span className="flex items-center gap-2 text-[#FAF7F2]/90 tracking-[0.12em]">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58] animate-pulse"></span>
-                <span>{storeStatus.text}</span>
-              </span>
-            </div>
-
-            {/* Concierge & Walk-In Link */}
-            <div className="flex items-center gap-6 text-[10px] text-[#B88B58]">
-              <span className="tracking-[0.2em] text-[#C4B3A3]">
-                Walk-Ins Welcomed Daily
-              </span>
-              <a
-                href="#location"
-                className="text-[#FAF7F2] hover:text-[#B88B58] transition-colors flex items-center gap-1 font-semibold tracking-[0.14em]"
-              >
-                <span>Visit Us • Mayfair W1</span>
-                <ArrowUpRight className="w-3 h-3 text-[#B88B58]" />
-              </a>
-            </div>
-          </div>
-
+      <aside className="bg-[#140C07] text-[#D8C7B8] text-[10px] sm:text-[11px] py-2 sm:py-2.5 border-b border-[#B88B58]/20 tracking-[0.18em] sm:tracking-[0.22em] uppercase select-none font-sans">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center text-center">
+          <a
+            href="#location"
+            className="text-[#B88B58] hover:text-[#FAF7F2] font-semibold tracking-[0.18em] sm:tracking-[0.22em] transition-colors whitespace-nowrap"
+          >
+            No. 42 Mount Street, Mayfair
+          </a>
         </div>
       </aside>
 
