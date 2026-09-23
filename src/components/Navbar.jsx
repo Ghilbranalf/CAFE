@@ -96,32 +96,45 @@ export default function Navbar() {
     <>
       {/* Editorial Announcement Ribbon (Minimal & Classical) */}
       <aside className="bg-[#140C07] text-[#D8C7B8] text-[10px] sm:text-[11px] py-2 sm:py-2.5 border-b border-[#B88B58]/20 tracking-[0.14em] sm:tracking-[0.18em] uppercase select-none font-sans">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-1.5 sm:gap-3 text-center sm:text-left">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* Location & Status */}
-          <div className="flex items-center gap-2 sm:gap-3">
-            <span className="text-[#B88B58] font-semibold hidden md:inline">
-              No. 42 Mount Street, Mayfair
-            </span>
-            <span className="text-[#B88B58]/40 hidden md:inline">|</span>
-            <span className="flex items-center gap-2 text-[#FAF7F2]/90">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58] animate-pulse"></span>
-              <span>{storeStatus.text}</span>
-            </span>
-          </div>
-
-          {/* Concierge & Walk-in note */}
-          <div className="flex items-center gap-4 sm:gap-6 text-[10px] text-[#B88B58]">
-            <span className="hidden sm:inline tracking-[0.22em] text-[#C4B3A3]">
-              Walk-Ins Welcomed Daily
-            </span>
+          {/* Mobile & iPad (Tablet) View: Single Pristine Line Only */}
+          <div className="xl:hidden flex items-center justify-center text-center">
             <a
               href="#location"
-              className="text-[#FAF7F2] hover:text-[#B88B58] transition-colors flex items-center gap-1 font-semibold"
+              className="text-[#B88B58] hover:text-[#FAF7F2] font-semibold tracking-[0.18em] sm:tracking-[0.22em] transition-colors whitespace-nowrap"
             >
-              <span>Visit Us • Mayfair W1</span>
-              <ArrowUpRight className="w-3 h-3 text-[#B88B58]" />
+              No. 42 Mount Street, Mayfair
             </a>
+          </div>
+
+          {/* Desktop View (xl+): Full Editorial Status in 1 Single Unbroken Line */}
+          <div className="hidden xl:flex items-center justify-between gap-6 w-full whitespace-nowrap">
+            {/* Location & Real-Time London Status */}
+            <div className="flex items-center gap-3">
+              <span className="text-[#B88B58] font-semibold tracking-[0.16em]">
+                No. 42 Mount Street, Mayfair
+              </span>
+              <span className="text-[#B88B58]/40">|</span>
+              <span className="flex items-center gap-2 text-[#FAF7F2]/90 tracking-[0.12em]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B88B58] animate-pulse"></span>
+                <span>{storeStatus.text}</span>
+              </span>
+            </div>
+
+            {/* Concierge & Walk-In Link */}
+            <div className="flex items-center gap-6 text-[10px] text-[#B88B58]">
+              <span className="tracking-[0.2em] text-[#C4B3A3]">
+                Walk-Ins Welcomed Daily
+              </span>
+              <a
+                href="#location"
+                className="text-[#FAF7F2] hover:text-[#B88B58] transition-colors flex items-center gap-1 font-semibold tracking-[0.14em]"
+              >
+                <span>Visit Us • Mayfair W1</span>
+                <ArrowUpRight className="w-3 h-3 text-[#B88B58]" />
+              </a>
+            </div>
           </div>
 
         </div>
