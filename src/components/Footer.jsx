@@ -99,7 +99,7 @@ export default function Footer() {
             <div className="text-xs text-[#A8988C] space-y-1 mb-4 font-sans">
               <p>Monday – Thursday: 07:30 – 22:30 GMT</p>
               <p>Friday – Saturday: 07:30 – 23:00 GMT</p>
-              <p>Sunday Brunch: 08:00 – 22:30 GMT</p>
+              <p>Sunday: 08:00 – 22:30 GMT</p>
             </div>
 
             {/* Bespoke Quality Guarantee */}

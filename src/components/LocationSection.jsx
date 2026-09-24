@@ -65,7 +65,7 @@ export default function LocationSection() {
                         <strong className="text-[#140C07] font-semibold">07:30 – 23:00 GMT</strong>
                       </div>
                       <div className="flex justify-between">
-                        <span>Sunday Brunch &amp; Roast:</span>
+                        <span>Sunday:</span>
                         <strong className="text-[#140C07] font-semibold">08:00 – 22:30 GMT</strong>
                       </div>
                     </div>
