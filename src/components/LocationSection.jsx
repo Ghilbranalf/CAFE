@@ -25,72 +25,81 @@ export default function LocationSection() {
           
           {/* Left Details Card */}
           <Reveal effect="right" className="lg:col-span-5 h-full">
-            <div className="h-full bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-[#E8DFD5] shadow-xs flex flex-col justify-between hover:border-[#B88B58]/30 transition-colors">
-              <div className="space-y-6">
+            <div className="h-full bg-white rounded-3xl p-5 sm:p-8 lg:p-10 border border-[#E8DFD5] shadow-xs flex flex-col justify-between hover:border-[#B88B58]/30 transition-colors">
+              <div className="space-y-6 sm:space-y-7">
                 
                 {/* Address */}
-                <div className="flex items-start gap-3.5 sm:gap-4">
-                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#FAF7F2] border border-[#E8DFD5] text-[#B88B58] flex items-center justify-center shrink-0">
-                    <MapPin className="w-5 h-5" />
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#FAF7F2] border border-[#E8DFD5] text-[#B88B58] flex items-center justify-center shrink-0 shadow-2xs">
+                    <MapPin className="w-4.5 h-4.5 sm:w-5 sm:h-5" />
                   </div>
-                  <div>
-                    <h4 className="font-serif font-bold text-base text-[#140C07] mb-1">
+                  <div className="min-w-0 flex-1">
+                    <h4 className="font-serif font-bold text-sm sm:text-base text-[#140C07] mb-1">
                       London Sanctuary Address
                     </h4>
                     <p className="font-sans text-xs sm:text-sm text-[#6E6259] leading-relaxed font-light">
                       42 Mount Street, Mayfair, London W1K 2RN, United Kingdom
                     </p>
-                    <span className="text-xs text-[#B88B58] font-semibold mt-1 block">
+                    <span className="text-[11px] sm:text-xs text-[#B88B58] font-semibold mt-1.5 block leading-snug">
                       4-minute walk from Bond Street Station (Elizabeth &amp; Jubilee Lines)
                     </span>
                   </div>
                 </div>
 
                 {/* Hours */}
-                <div className="flex items-start gap-3.5 sm:gap-4">
-                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#FAF7F2] border border-[#E8DFD5] text-[#B88B58] flex items-center justify-center shrink-0">
-                    <Clock className="w-5 h-5" />
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#FAF7F2] border border-[#E8DFD5] text-[#B88B58] flex items-center justify-center shrink-0 shadow-2xs">
+                    <Clock className="w-4.5 h-4.5 sm:w-5 sm:h-5" />
                   </div>
-                  <div className="w-full">
-                    <h4 className="font-serif font-bold text-base text-[#140C07] mb-2">
+                  <div className="min-w-0 flex-1">
+                    <h4 className="font-serif font-bold text-sm sm:text-base text-[#140C07] mb-2.5">
                       Cafe &amp; Kitchen Hours
                     </h4>
-                    <div className="space-y-1.5 text-xs sm:text-sm text-[#6E6259] font-sans font-light">
-                      <div className="flex justify-between border-b border-[#F3EDE4] pb-1">
-                        <span>Monday – Thursday:</span>
-                        <strong className="text-[#140C07] font-semibold">07:30 – 22:30 GMT</strong>
+                    <div className="space-y-2 text-xs sm:text-sm font-sans font-light">
+                      <div className="flex items-center justify-between border-b border-[#F3EDE4] pb-1.5 gap-2">
+                        <span className="text-[#6E6259]">Monday – Thursday</span>
+                        <strong className="text-[#140C07] font-semibold whitespace-nowrap text-right">07:30 – 22:30 GMT</strong>
                       </div>
-                      <div className="flex justify-between border-b border-[#F3EDE4] pb-1">
-                        <span>Friday – Saturday:</span>
-                        <strong className="text-[#140C07] font-semibold">07:30 – 23:00 GMT</strong>
+                      <div className="flex items-center justify-between border-b border-[#F3EDE4] pb-1.5 gap-2">
+                        <span className="text-[#6E6259]">Friday – Saturday</span>
+                        <strong className="text-[#140C07] font-semibold whitespace-nowrap text-right">07:30 – 23:00 GMT</strong>
                       </div>
-                      <div className="flex justify-between">
-                        <span>Sunday:</span>
-                        <strong className="text-[#140C07] font-semibold">08:00 – 22:30 GMT</strong>
+                      <div className="flex items-center justify-between pt-0.5 gap-2">
+                        <span className="text-[#6E6259]">Sunday</span>
+                        <strong className="text-[#140C07] font-semibold whitespace-nowrap text-right">08:00 – 22:30 GMT</strong>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 {/* Contact & Socials */}
-                <div className="flex items-start gap-3.5 sm:gap-4">
-                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#FAF7F2] border border-[#E8DFD5] text-[#B88B58] flex items-center justify-center shrink-0">
-                    <Phone className="w-5 h-5" />
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#FAF7F2] border border-[#E8DFD5] text-[#B88B58] flex items-center justify-center shrink-0 shadow-2xs">
+                    <Phone className="w-4.5 h-4.5 sm:w-5 sm:h-5" />
                   </div>
-                  <div>
-                    <h4 className="font-serif font-bold text-base text-[#140C07] mb-1">
+                  <div className="min-w-0 flex-1">
+                    <h4 className="font-serif font-bold text-sm sm:text-base text-[#140C07] mb-2.5">
                       Concierge &amp; Enquiries
                     </h4>
-                    <div className="text-xs sm:text-sm text-[#6E6259] space-y-1 font-sans font-light">
-                      <p>
-                        Telephone: <a href="tel:+442079460912" className="font-bold text-[#140C07] hover:underline">+44 (0) 20 7946 0912</a>
-                      </p>
-                      <p>
-                        Email: <a href="mailto:concierge@heritageandroast.co.uk" className="text-[#B88B58] font-medium hover:underline">concierge@heritageandroast.co.uk</a>
-                      </p>
-                      <p>
-                        Instagram: <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-[#B88B58] hover:underline">@theheritageandroast</a>
-                      </p>
+                    <div className="space-y-2 text-xs sm:text-sm font-sans font-light">
+                      <div className="flex items-center justify-between border-b border-[#F3EDE4] pb-1.5 gap-2">
+                        <span className="text-[#8C7D73] text-[11px] sm:text-xs uppercase tracking-wider font-medium shrink-0">Telephone</span>
+                        <a href="tel:+442079460912" className="font-semibold text-[#140C07] hover:text-[#B88B58] transition-colors whitespace-nowrap text-right">
+                          +44 (0) 20 7946 0912
+                        </a>
+                      </div>
+                      <div className="flex flex-col xs:flex-row xs:items-center xs:justify-between border-b border-[#F3EDE4] pb-1.5 gap-1 xs:gap-2">
+                        <span className="text-[#8C7D73] text-[11px] sm:text-xs uppercase tracking-wider font-medium shrink-0">Email</span>
+                        <a href="mailto:concierge@heritageandroast.co.uk" className="text-[#B88B58] font-medium hover:underline text-xs truncate max-w-full xs:text-right">
+                          concierge@heritageandroast.co.uk
+                        </a>
+                      </div>
+                      <div className="flex items-center justify-between pt-0.5 gap-2">
+                        <span className="text-[#8C7D73] text-[11px] sm:text-xs uppercase tracking-wider font-medium shrink-0">Instagram</span>
+                        <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-[#B88B58] font-medium hover:underline text-right">
+                          @theheritageandroast
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -98,12 +107,12 @@ export default function LocationSection() {
               </div>
 
               {/* Google Maps Button */}
-              <div className="pt-8 mt-6 border-t border-[#F3EDE4]">
+              <div className="pt-6 sm:pt-8 mt-6 sm:mt-8 border-t border-[#F3EDE4]">
                 <a
                   href="https://maps.google.com/?q=Mount+Street+Mayfair+London"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="shimmer-btn w-full inline-flex items-center justify-center gap-2 py-4 px-6 rounded-xl bg-[#140C07] hover:bg-[#2A1C14] text-[#FAF7F2] text-xs uppercase tracking-widest font-bold shadow-md hover:shadow-lg transition-all duration-300 border border-[#B88B58]/40"
+                  className="shimmer-btn w-full inline-flex items-center justify-center gap-2 py-3.5 sm:py-4 px-6 rounded-xl bg-[#140C07] hover:bg-[#2A1C14] text-[#FAF7F2] text-xs uppercase tracking-widest font-bold shadow-md hover:shadow-lg transition-all duration-300 border border-[#B88B58]/40"
                 >
                   <Navigation className="w-3.5 h-3.5 text-[#B88B58]" />
                   <span>Open in Google Maps</span>
