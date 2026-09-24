@@ -222,17 +222,26 @@ export default function Reviews() {
         {/* Google Score Summary Bar */}
         <Reveal effect="zoom" delay={200}>
           <div className="bg-white rounded-2xl p-6 sm:p-8 border border-[#E8DFD5] shadow-xs flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-6 hover:border-[#B88B58]/40 transition-colors">
-            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-5 text-center sm:text-left">
-              <span className="font-serif font-extrabold text-4xl sm:text-5xl text-[#140C07] leading-none">
-                4.9
-              </span>
-              <div className="flex flex-col items-center sm:items-start">
-                <div className="flex items-center justify-center sm:justify-start gap-1 text-[#B88B58]">
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-5 text-center sm:text-left">
+              {/* Score & Stars: Unified row on mobile, separated layout on desktop */}
+              <div className="flex items-center gap-3 sm:gap-0">
+                <span className="font-serif font-extrabold text-3xl sm:text-5xl text-[#140C07] leading-none">
+                  4.9
+                </span>
+                <div className="flex sm:hidden items-center gap-1 text-[#B88B58]">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-[#B88B58]" />
                   ))}
                 </div>
-                <span className="text-xs sm:text-sm text-[#6E6259] font-medium mt-1.5 sm:mt-1 block">
+              </div>
+
+              <div className="flex flex-col items-center sm:items-start">
+                <div className="hidden sm:flex items-center gap-1 text-[#B88B58]">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-[#B88B58]" />
+                  ))}
+                </div>
+                <span className="text-xs sm:text-sm text-[#6E6259] font-medium sm:mt-1 block">
                   Ranked Exceptional across 820+ verified Google Reviews
                 </span>
               </div>
@@ -242,7 +251,7 @@ export default function Reviews() {
               href="https://maps.google.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="shimmer-btn w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 rounded-xl border border-[#140C07] text-[#140C07] hover:bg-[#140C07] hover:text-[#FAF7F2] text-xs uppercase tracking-widest font-bold transition-all duration-300 text-center"
+              className="shimmer-btn w-full sm:w-auto max-w-xs sm:max-w-none inline-flex items-center justify-center px-7 py-3.5 rounded-xl border border-[#140C07] text-[#140C07] hover:bg-[#140C07] hover:text-[#FAF7F2] text-xs uppercase tracking-widest font-bold transition-all duration-300 text-center"
             >
               Leave a Google Review
             </a>
