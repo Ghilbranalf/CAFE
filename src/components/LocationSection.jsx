@@ -84,19 +84,19 @@ export default function LocationSection() {
                     <div className="space-y-2 text-xs sm:text-sm font-sans font-light">
                       <div className="flex items-center justify-between border-b border-[#F3EDE4] pb-1.5 gap-2">
                         <span className="text-[#8C7D73] text-[11px] sm:text-xs uppercase tracking-wider font-medium shrink-0">Telephone</span>
-                        <a href="tel:+442079460912" className="font-semibold text-[#140C07] hover:text-[#B88B58] transition-colors whitespace-nowrap text-right">
+                        <a href="tel:+442079460912" className="font-semibold text-[#140C07] hover:text-[#B88B58] transition-colors whitespace-nowrap text-right text-xs sm:text-sm">
                           +44 (0) 20 7946 0912
                         </a>
                       </div>
-                      <div className="flex flex-col xs:flex-row xs:items-center xs:justify-between border-b border-[#F3EDE4] pb-1.5 gap-1 xs:gap-2">
+                      <div className="flex items-center justify-between border-b border-[#F3EDE4] pb-1.5 gap-2">
                         <span className="text-[#8C7D73] text-[11px] sm:text-xs uppercase tracking-wider font-medium shrink-0">Email</span>
-                        <a href="mailto:concierge@heritageandroast.co.uk" className="text-[#B88B58] font-medium hover:underline text-xs truncate max-w-full xs:text-right">
+                        <a href="mailto:concierge@heritageandroast.co.uk" className="text-[#B88B58] font-medium hover:underline text-[11px] xs:text-xs sm:text-sm tracking-tight xs:tracking-normal whitespace-nowrap text-right truncate">
                           concierge@heritageandroast.co.uk
                         </a>
                       </div>
                       <div className="flex items-center justify-between pt-0.5 gap-2">
                         <span className="text-[#8C7D73] text-[11px] sm:text-xs uppercase tracking-wider font-medium shrink-0">Instagram</span>
-                        <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-[#B88B58] font-medium hover:underline text-right">
+                        <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-[#B88B58] font-medium hover:underline text-xs sm:text-sm text-right whitespace-nowrap">
                           @theheritageandroast
                         </a>
                       </div>
