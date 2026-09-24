@@ -40,9 +40,12 @@ export default function LocationSection() {
                     <p className="font-sans text-xs sm:text-sm text-[#6E6259] leading-relaxed font-light">
                       42 Mount Street, Mayfair, London W1K 2RN, United Kingdom
                     </p>
-                    <span className="text-[11px] sm:text-xs text-[#B88B58] font-semibold mt-1.5 block leading-snug">
-                      4-minute walk from Bond Street Station (Elizabeth &amp; Jubilee Lines)
-                    </span>
+                    <div className="text-[11px] sm:text-xs text-[#B88B58] font-semibold mt-1.5 leading-snug">
+                      <span>4-minute walk from Bond Street Station</span>
+                      <span className="block font-medium text-[#A67848] text-[10.5px] sm:text-[11px] mt-0.5">
+                        (Elizabeth &amp; Jubilee Lines)
+                      </span>
+                    </div>
                   </div>
                 </div>
 
